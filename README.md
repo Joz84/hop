@@ -86,6 +86,16 @@ Make sure the database is up-to-date on the production server. To run database c
 
 **Example**: generate seeds with `heroku run rails db:seed`.
 
+## Good practices
+
+- **DRY**: avoid repeating yourself in the app. Use variables, iterators instead of copy-pasting floating content through the app.
+- **Unused code**: delete code/files which aren't use in the app.
+- **Naming convention**: respect a good naming convention through the whole app.
+- **Readability**: the code must be readable. Break lines, properly indent...
+- **Do what you have to do**: always push something which is in direct link with your branch.
+- **Always test**: never push code that doesn't work. Always test in development that your code work.
+- **Think responsive**: for the front-end part, try the app on every device size.
+
 ## About
 
 Hop has been made during Le Wagon bootcamp by:
