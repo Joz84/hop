@@ -89,6 +89,7 @@ Make sure the database is up-to-date on the production server. To run database c
 ## Good practices
 
 - **DRY**: avoid repeating yourself in the app. Use variables, iterators instead of copy-pasting floating content through the app.
+- **Sass**: use the power of Sass for the style part. No more CSS.
 - **Unused code**: delete code/files which aren't use in the app.
 - **Naming convention**: respect a good naming convention through the whole app.
 - **Readability**: the code must be readable. Break lines, properly indent...
