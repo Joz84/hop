@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171121101026) do
+ActiveRecord::Schema.define(version: 20171121101358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,4 +39,23 @@ ActiveRecord::Schema.define(version: 20171121101026) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "websites", force: :cascade do |t|
+    t.string "title"
+    t.binary "background_image"
+    t.binary "profile_image"
+    t.text "description"
+    t.string "facebook_url"
+    t.string "twitter_url"
+    t.string "email"
+    t.string "url"
+    t.bigint "user_id"
+    t.bigint "template_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["template_id"], name: "index_websites_on_template_id"
+    t.index ["user_id"], name: "index_websites_on_user_id"
+  end
+
+  add_foreign_key "websites", "templates"
+  add_foreign_key "websites", "users"
 end
