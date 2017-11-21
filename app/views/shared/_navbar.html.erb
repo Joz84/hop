@@ -1,6 +1,10 @@
-<div class="navbar">
+<div class="navbar-home">
   <%= link_to '#' do %>
-    <%= image_tag 'logo' %>
+    <%= image_tag 'logo-white' %>
   <% end %>
-  <%= link_to 'Log in', '#' %>
+
+  <ul>
+    <li><%= link_to 'Log in', '#', class: 'link' %></li>
+    <li><%= link_to 'Dashboard', '#', class: 'link' %></li>
+  </ul>
 </div>
