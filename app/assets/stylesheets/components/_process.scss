@@ -12,8 +12,7 @@
     align-items: center;
     flex-direction: column;
       & .process-card-step {
-      font-size: 10px;
-      color: $primary;
+      color: $white;
       }
       & .process-card-logo {
       width: 100%;
@@ -26,7 +25,7 @@
         }
       }
       & .process-card-description {
-      font-size: 20px;
+      font-size: 22px;
       }
     }
 
