@@ -1,0 +1,16 @@
+.button {
+  background: $green;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba($black, 0.3);
+  color: $white;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  &:hover {
+    background: darken($green, 10%);
+    color: $white;
+    text-decoration: none;
+  }
+}

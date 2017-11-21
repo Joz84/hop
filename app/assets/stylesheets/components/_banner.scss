@@ -1,0 +1,33 @@
+.banner {
+  align-items: center;
+  background-image: linear-gradient(rgba($black ,0.5), rgba($black ,0.8)), url('banner-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  @media(min-width: 768px) {
+    height: 600px;
+  }
+
+  .banner-content {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    text-align: center;
+    @media(min-width: 768px) {
+      padding: 0 200px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .intro {
+      font-size: 22px;
+      margin: 50px 0;
+    }
+  }
+}
