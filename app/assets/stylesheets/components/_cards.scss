@@ -1,4 +1,33 @@
-.card1 {
-  min-heigth: 100px;
-  background-image: url(images/template1.png)
+// temporary cards simulate templates for home
+.card {
+  position: relative;
+  text-align: center;
+  height: 190px;
+  width: 300px;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+    h6 {
+      position: absolute;
+      right: 105px;
+    }
+
+      p {
+        position: absolute;
+        bottom: 80px;
+        right: 65px;
+      }
 }
+
+.card1 {
+  background-image: url("template1.png");
+}
+.card2 {
+  background-image: url("template2.png");
+}
+
+.card3 {
+  background-image: url("template3.png");
+}
+
