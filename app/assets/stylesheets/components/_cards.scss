@@ -1,12 +1,30 @@
 // temporary cards simulate templates for home
 .card {
+  margin-top: 50px;
   position: relative;
-  text-align: center;
-  height: 250px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px 1px rgba($black, 0.3);
-  background-size: cover !important;
+  text-align: left;
+
+  .card-background {
+    background-position: center center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba($black, 0.3);
+    height: 250px;
+  }
+
+  .card-background-add {
+    align-items: center;
+    background: lighten($black, 40%);
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-size: 100px;
+    }
+  }
+
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
 }
-
-
-
