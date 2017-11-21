@@ -1,4 +1,4 @@
-<div class="container" style="background-color: #A2A2A2;">
+<div class="container" style="background-color: #A2A2A2; margin: 0 0; padding: 0 0;">
   <div class="row">
 
     <div class="col-sm-6 col-md-3">
@@ -8,7 +8,7 @@
             <h2>1</h2>
           </div>
           <div class="process-card-logo">
-            <%= image_tag "Logo_Paint_1_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "Logo_Style_black.png", class: 'process-logo-resize', id: 'logo-style' %>
           </div>
           <div class="process-card-description">
             <p>Choose a style</p>
@@ -27,7 +27,7 @@
             <h2>2</h2>
           </div>
           <div class="process-card-logo">
-            <%= image_tag "Logo_Edit_1_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "Logo_Edit_black.png", class: 'process-logo-resize' %>
           </div>
           <div class="process-card-description">
             <p>Edit your infos</p>
@@ -46,7 +46,7 @@
             <h2>3</h2>
           </div>
           <div class="process-card-logo">
-            <%= image_tag "Logo_WWW_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "Logo_Address_black.png", class: 'process-logo-resize' %>
           </div>
           <div class="process-card-description">
             <p>Add an address</p>
@@ -65,7 +65,7 @@
             <h2>4</h2>
           </div>
           <div class="process-card-logo">
-            <%= image_tag "Logo_Website_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "Logo_Finished_black.png", class: 'process-logo-resize' %>
           </div>
           <div class="process-card-description">
             <p>Have your website</p>
@@ -74,3 +74,22 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<script>
+  let intervalID;
+  function changeCouleur() {
+    intervalID = setInterval(changeLogo, 1000);
+  }
+
+  function changeLogo() {
+    let elem = document.getElementById("logo-style");
+
+    if (elem.source == 'Logo_Style_black.png') {
+      elem.source = 'Logo_Style_primary';
+    } else {
+      elem.style.color = 'Logo_Style_black.png';
+    }
+  }
+</script>
