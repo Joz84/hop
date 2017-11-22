@@ -12,9 +12,15 @@ class WebsitesController < ApplicationController
     @website.user = @user
 
     if @website.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
     else
-      render 'new'
+      respond_to do |format|
+        format.html { render 'new' }
+        format.js
+      end
     end
   end
 
