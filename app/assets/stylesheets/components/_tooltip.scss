@@ -1,0 +1,60 @@
+.tooltip-container {
+  position: absolute;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px rgba($black, 0.4);
+  background-color: $black;
+  color: $white;
+  border-radius: 5px;
+  width: 350px;
+  z-index: 1;
+
+  .tooltip-content {
+  position: relative;
+  padding: 2px;
+  padding: 5px;
+
+    .tooltip-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px $primary solid;
+      padding-bottom: 5px;
+
+      i {
+        color: $primary;
+        font-size: 1.5em;
+      }
+
+      .tootip-title {
+        font-family: Rajdhani;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+    }
+
+    .tooltip-text {
+      font-family: Oxygen;
+      font-size: 16px;
+      font-weight: lighter;
+      margin: 8px;
+    }
+
+    .right {
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+    }
+  }
+  &.tooltip-navigate {
+    bottom: 80px;
+    left: 10px;
+  }
+
+  &.tooltip-welcome {
+    bottom: 500px;
+    left: 10px;
+  }
+
+}
+
+
