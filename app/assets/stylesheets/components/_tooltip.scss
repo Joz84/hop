@@ -14,27 +14,24 @@
   padding: 2px;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px rgba($black, 0.4);
-}
-
-.tooltip-head {
-display: flex;
-flex-direction: raw;
-justify-content: space-between;
-margin: 5px 5px;
-border-bottom: 2px $primary solid;
-  i {
-    color: $primary;
-    font-size: 1.5em;
+    .tooltip-head {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 5px;
+      border-bottom: 2px $primary solid;
+        i {
+          color: $primary;
+          font-size: 1.5em;
+        }
+          .tootip-title {
+      font-family: Rajdhani;
+      font-size: 20px;
+      font-weight: bolder;
+      text-align: center;
+      flex: 1;
+      padding-bottom: 6px;
+    }
   }
-}
-
-.tootip-title {
-  font-family: Rajdhani;
-  font-size: 20px;
-  font-weight: bolder;
-  text-align: center;
-  flex: 1;
-  padding-bottom: 6px;
 }
 
 .tooltip-text {
