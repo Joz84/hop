@@ -2,9 +2,15 @@
   background: AliceBlue;
   height: 100vh;
 
+  .builder-website {
+    height: calc(100vh - 70px);
+    width: 100%;
+  }
+
   .toolbar {
     bottom: 0;
     position: fixed;
     width: 100%;
   }
 }
+
