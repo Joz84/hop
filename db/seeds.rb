@@ -50,14 +50,13 @@ background_list = [
 ]
 
 # Create the main user
-User.create(name: 'Paul', email: 'paul@gmail.com', password: '123456')
+User.create(email: 'paul@gmail.com', password: '123456')
 
 # Create other users
-puts 'Creating 4 fake Users, Templatea and Websites...'
+puts 'Creating 4 fake Users, Templates and Websites...'
 for i in 0..3
   print '👨 '
   user = User.new(
-    name: user_list[i],
     email: email_list[i],
     password: "123456"
     )
@@ -72,12 +71,12 @@ for i in 0..3
 
   print '💻 '
   website = Website.new(
-    title: "Hi I'm #{user.name}!",
+    title: "Hi I'm #{user_list[i]}!",
     description: description_list[i],
     facebook_url: "#",
     twitter_url: "#",
-    emai: email_list[i],
-    url: "#{user.name}.lewagon.io",
+    email: email_list[i],
+    url: "www.#{user_list[i]}.lewagon.io",
     user_id: user[:id],
     template_id: template[:id],
     background_image: background_list[i],
