@@ -1,0 +1,44 @@
+.tooltip-box-position {
+  position: relative;
+  margin: 20px;
+}
+
+.tooltip-box {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  width: 350px;
+  background-color: $black;
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba($black, 0.4);
+}
+
+.tooltip-head {
+display: flex;
+flex-direction: raw;
+justify-content: space-between;
+margin: 5px 5px;
+border-bottom: 2px $primary solid;
+  i {
+    color: $primary;
+    font-size: 1.5em;
+  }
+}
+
+.tootip-title {
+  font-family: Rajdhani;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  flex: 1;
+  padding-bottom: 6px;
+}
+
+.tooltip-text {
+  font-family: Oxygen;
+  font-size: 16px;
+  text-align: center;
+  font-weight: lighter;
+  margin: 8px;
+}
