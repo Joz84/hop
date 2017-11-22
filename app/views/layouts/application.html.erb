@@ -7,22 +7,6 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-  <script>
-    let intervalID;
-    function changeCouleur() {
-      intervalID = setInterval(changeLogo, 1000);
-    }
-
-    function changeLogo() {
-      let elem = document.getElementById("logo-style");
-
-      if (elem.source == 'Logo_Style_black.png') {
-        elem.source = 'Logo_Style_primary';
-      } else {
-        elem.style.color = 'Logo_Style_black.png';
-      }
-    }
-  </script>
   </head>
   <body onload="changeCouleur()">
     <%#= render 'shared/navbar' %>
