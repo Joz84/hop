@@ -5,6 +5,11 @@
   .builder-website {
     height: calc(100vh - 70px);
     width: 100%;
+    overflow: auto;
+
+      .template-flex {
+        bottom: 70px;
+      }
   }
 
   .toolbar {
