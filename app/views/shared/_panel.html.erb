@@ -1,9 +1,9 @@
 <div class="panel">
-  <form class="" action="index.html" method="post">
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" class="form-control" name="title" placeholder="Write a unique title...">
-    </div>
-    <input type="submit" value="Save" class="button">
-  </form>
+
+  <%= simple_form_for @website, html: { class: 'template-form' } do |f| %>
+    <!-- display name by default -->
+    <%= f.input :template, collection: @templates, as: :radio_buttons, label: 'Select your template' %>
+    <%= f.button :submit, class: 'button btn-block', value: 'Save template' %>
+  <% end %>
+
 </div>

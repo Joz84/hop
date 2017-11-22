@@ -9,9 +9,10 @@
   padding: 15px 20px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  &:hover {
-    background: darken($green, 10%);
-    color: $white;
+  &:hover, &:focus {
+    background: darken($green, 10%) !important;
+    border-color: transparent !important;
+    color: $white !important;
     text-decoration: none;
   }
 }

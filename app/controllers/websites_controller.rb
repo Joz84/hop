@@ -1,5 +1,8 @@
 class WebsitesController < ApplicationController
+  layout 'builder'
+
   def new
-    render layout: 'builder'
+    @templates = Template.all
+    @website = Website.new
   end
 end
