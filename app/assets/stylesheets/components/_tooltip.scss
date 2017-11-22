@@ -2,6 +2,7 @@
   position: fixed;
   left: 5px;
   bottom: 75px;
+  z-index: 1000;
 }
 
 .tooltip-box {
@@ -42,4 +43,10 @@ border-bottom: 2px $primary solid;
   text-align: center;
   font-weight: lighter;
   margin: 8px;
+}
+
+.right {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
 }
