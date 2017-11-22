@@ -1,76 +1,113 @@
-<div class="container" style="background-color: #A2A2A2;">
-  <div class="row">
+<script>
+  let intervalID
+  function changeCouleur() {
+    intervalID = setInterval(changeLogo, 1000);
+  }
+  function changeLogo() {
+    let elem = document.getElementById("logo-style");
+    let elm = document.getElementById("logo-edit");
 
-    <div class="col-sm-6 col-md-3">
-      <div class="process-card">
-        <div class="process-flex">
-          <div class="process-card-step">
-            <h2>1</h2>
-          </div>
-          <div class="process-card-logo">
-            <%= image_tag "Logo_Paint_1_black.png", class: 'process-logo-resize' %>
-          </div>
-          <div class="process-card-description">
-            <p>Choose a style</p>
-          </div>
-        </div>
-        <div class="process-card-arrow">
-          <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-arrow-resize' %>
-        </div>
-      </div>
-    </div>
+    if (elem.src == "http://localhost:3000/assets/Logo_Style_black-b678455068f5d7ed87dce4bbfb738388a0ceba386af5de6f4dfdc01b46865ead.png") {
+      elem.src = "http://localhost:3000/assets/Logo_Style_primary-dfcede933e45182518062e9464084b2085aa9694a522a97b2589d4feff8c8a12.png";
+    } else if (elem.src == "http://localhost:3000/assets/Logo_Style_primary-dfcede933e45182518062e9464084b2085aa9694a522a97b2589d4feff8c8a12.png") {
+      elem.src = "http://localhost:3000/assets/Logo_Style_secondary-6730fc5f0e1f687ff9b664f1e7f153631a55237e7d1980fd7883508f72cf0a89.png";
+    } else {
+      elem.src = "http://localhost:3000/assets/Logo_Style_black-b678455068f5d7ed87dce4bbfb738388a0ceba386af5de6f4dfdc01b46865ead.png";
+    }
+  }
 
-    <div class="col-sm-6 col-md-3">
-      <div class="process-card">
-        <div class="process-flex">
-          <div class="process-card-step">
-            <h2>2</h2>
-          </div>
-          <div class="process-card-logo">
-            <%= image_tag "Logo_Edit_1_black.png", class: 'process-logo-resize' %>
-          </div>
-          <div class="process-card-description">
-            <p>Edit your infos</p>
-          </div>
-        </div>
-        <div class="process-card-arrow">
-          <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-arrow-resize' %>
-        </div>
-      </div>
-    </div>
+  //   if (elm.src == "http://localhost:3000/assets/Logo_Edit_black-90bb740b2b1beecd9671440301cd43d9c5bbd0057bab0a1a9101acdd38214498.png") {
+  //     elm.src = "http://localhost:3000/assets/Logo_Edit2_black-e319cf5f9540e91260f73ec2c4f114133a1165778426afc32a9d5177d1c38945.png"
+  //   } else {
+  //     elm.src = "http://localhost:3000/assets/Logo_Edit_black-90bb740b2b1beecd9671440301cd43d9c5bbd0057bab0a1a9101acdd38214498.png"
+  //   }
+  // }
 
-    <div class="col-sm-6 col-md-3">
-      <div class="process-card">
-        <div class="process-flex">
-          <div class="process-card-step">
-            <h2>3</h2>
-          </div>
-          <div class="process-card-logo">
-            <%= image_tag "Logo_WWW_black.png", class: 'process-logo-resize' %>
-          </div>
-          <div class="process-card-description">
-            <p>Add an address</p>
-          </div>
-        </div>
-        <div class="process-card-arrow">
-          <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-arrow-resize' %>
-        </div>
-      </div>
-    </div>
+  function stopTextColor() {
+  clearInterval(intervalID);
+  }
+</script>
 
-    <div class="col-sm-6 col-md-3">
-      <div class="process-card">
-        <div class="process-flex">
-          <div class="process-card-step">
-            <h2>4</h2>
+
+<div class="container-lg-gray">
+  <div class="container" style="background-color: #A2A2A2; padding: 0 0;">
+    <div class="row">
+
+      <div class="col-sm-6 col-md-3">
+        <div class="process-card">
+          <div class="process-flex">
+            <div class="process-card-step">
+              <h2>1</h2>
+            </div>
+            <div class="process-card-logo">
+              <%= image_tag "Logo_Style_black.png", class: 'process-logo-resize', id: 'logo-style' %>
+            </div>
+            <div class="process-card-description">
+              <p>Choose a style</p>
+            </div>
           </div>
-          <div class="process-card-logo">
-            <%= image_tag "Logo_Website_black.png", class: 'process-logo-resize' %>
-          </div>
-          <div class="process-card-description">
-            <p>Have your website</p>
+          <div class="process-card-arrow">
+            <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-arrow-resize' %>
           </div>
         </div>
       </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="process-card">
+          <div class="process-flex">
+            <div class="process-card-step">
+              <h2>2</h2>
+            </div>
+            <div class="process-card-logo">
+              <%= image_tag "Logo_Edit_black.png", class: 'process-logo-resize', id: 'logo-edit' %>
+            </div>
+            <div class="process-card-description">
+              <p>Edit your infos</p>
+            </div>
+          </div>
+          <div class="process-card-arrow">
+            <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-arrow-resize' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="process-card">
+          <div class="process-flex">
+            <div class="process-card-step">
+              <h2>3</h2>
+            </div>
+            <div class="process-card-logo">
+              <%= image_tag "Logo_Address_black.png", class: 'process-logo-resize' %>
+            </div>
+            <div class="process-card-description">
+              <p>Add an address</p>
+            </div>
+          </div>
+          <div class="process-card-arrow">
+            <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-arrow-resize' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="process-card">
+          <div class="process-flex">
+            <div class="process-card-step">
+              <h2>4</h2>
+            </div>
+            <div class="process-card-logo">
+              <%= image_tag "Logo_Finished_black.png", class: 'process-logo-resize' %>
+            </div>
+            <div class="process-card-description">
+              <p>Have your website</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
 
