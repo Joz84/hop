@@ -1,5 +1,5 @@
 class WebsitesController < ApplicationController
-  def index
-
+  def new
+    render layout: 'builder'
   end
 end

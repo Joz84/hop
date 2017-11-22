@@ -1,0 +1,12 @@
+.panel {
+  background: $black;
+  border-bottom: 1px solid $light-black;
+  height: calc(100% - 70px);
+  padding: 25px;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  @media(min-width: 480px) {
+    width: 400px;
+  }
+}

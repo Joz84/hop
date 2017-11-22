@@ -8,10 +8,8 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
-  <body onload="changeCouleur()">
-    <%= render 'shared/flashes' %>
+  <body>
     <%= yield %>
-    <%= render 'shared/toolbar' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
