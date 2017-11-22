@@ -7,12 +7,12 @@
     let elem = document.getElementById("logo-style");
     let elm = document.getElementById("logo-edit");
 
-    if (elem.src == "http://localhost:3000/assets/Logo_Style_black-b678455068f5d7ed87dce4bbfb738388a0ceba386af5de6f4dfdc01b46865ead.png") {
-      elem.src = "http://localhost:3000/assets/Logo_Style_primary-dfcede933e45182518062e9464084b2085aa9694a522a97b2589d4feff8c8a12.png";
-    } else if (elem.src == "http://localhost:3000/assets/Logo_Style_primary-dfcede933e45182518062e9464084b2085aa9694a522a97b2589d4feff8c8a12.png") {
-      elem.src = "http://localhost:3000/assets/Logo_Style_secondary-6730fc5f0e1f687ff9b664f1e7f153631a55237e7d1980fd7883508f72cf0a89.png";
+    if (elem.src == "<%= image_url 'Logo_Style_black.png' %>" ) {
+      elem.src = "<%= image_url 'Logo_Style_primary.png' %>"  ;
+    } else if (elem.src == "<%= image_url 'Logo_Style_primary.png' %>") {
+      elem.src = "<%= image_url 'Logo_Style_secondary.png' %>" ;
     } else {
-      elem.src = "http://localhost:3000/assets/Logo_Style_black-b678455068f5d7ed87dce4bbfb738388a0ceba386af5de6f4dfdc01b46865ead.png";
+      elem.src = "<%= image_url 'Logo_Style_black.png' %>";
     }
   }
 
