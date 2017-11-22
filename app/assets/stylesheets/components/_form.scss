@@ -1,0 +1,9 @@
+form {
+  label {
+    color: $white;
+    font-weight: lighter;
+  }
+  input:focus {
+    outline: none !important;
+  }
+}
