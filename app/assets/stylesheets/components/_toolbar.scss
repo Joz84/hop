@@ -1,0 +1,35 @@
+.toolbar {
+  align-items: center;
+  background: $black;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+
+  .toolbar-menu {
+    margin: 0;
+    padding: 0;
+
+    .toolbar-menu-item {
+      display: inline-block;
+      margin: 0 25px;
+
+      a {
+        color: $light-black;
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      &.toolbar-menu-item-active a {
+        color: $white;
+      }
+      @media(min-width: 768px) {
+        margin: 0 50px;
+      }
+    }
+
+    span {
+      color: $light-black;
+    }
+  }
+}
