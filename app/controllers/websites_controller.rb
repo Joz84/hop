@@ -7,7 +7,9 @@ class WebsitesController < ApplicationController
   end
 
   def update
-
+    @website = Website.find(params[:id])
+    @website.update(website_params)
+    redirect_to edit_website_path(@website)
   end
 
   def new
@@ -38,6 +40,6 @@ class WebsitesController < ApplicationController
   private
 
   def website_params
-    params.require(:website).permit(:template_id, :id)
+    params.require(:website).permit(:template_id)
   end
 end
