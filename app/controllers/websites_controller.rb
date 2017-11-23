@@ -2,7 +2,6 @@ class WebsitesController < ApplicationController
   layout 'builder'
 
   def edit
-    @templates = Template.all
     @website = Website.find(params[:id])
   end
 
@@ -12,17 +11,9 @@ class WebsitesController < ApplicationController
     redirect_to edit_website_path(@website)
   end
 
-  def new
-    @templates = Template.all
-    @website = Website.new
-  end
-
   def create
     @website = current_user.websites.create(template: Template.first)
     redirect_to edit_website_path(@website)
-    # @website = Website.new(website_params)
-    # @user = current_user
-    # @website.user = @user
 
     # if @website.save
     #   respond_to do |format|
