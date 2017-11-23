@@ -23,10 +23,10 @@ email_list = [
 
 # Templates
 template_list = [
-  "North",
-  "South",
-  "West",
-  "East"
+  "north",
+  "south",
+  "west",
+  "east"
 ]
 
 # Websites
@@ -65,7 +65,7 @@ for i in 0..3
   print '🖌'
   template = Template.new(
     name: template_list[i],
-    slug: "template_#{i+1}"
+    slug: "template_#{template_list[i]}"
   )
   template.save!
 
