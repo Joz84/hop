@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(rgba($black ,0.3), rgba($black ,0.7)), asset-url('Background_2.jpg');
+  background: linear-gradient(rgba($black ,0.3), rgba($black ,0.7));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

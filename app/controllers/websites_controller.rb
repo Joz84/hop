@@ -12,17 +12,9 @@ class WebsitesController < ApplicationController
     redirect_to edit_website_path(@website)
   end
 
-  def new
-    @templates = Template.all
-    @website = Website.new
-  end
-
   def create
-    @website = current_user.websites.create(template: Template.first)
+    @website = current_user.websites.create(template: random_template)
     redirect_to edit_website_path(@website)
-    # @website = Website.new(website_params)
-    # @user = current_user
-    # @website.user = @user
 
     # if @website.save
     #   respond_to do |format|
@@ -41,5 +33,9 @@ class WebsitesController < ApplicationController
 
   def website_params
     params.require(:website).permit(:template_id)
+  end
+
+  def random_template
+    Template.all.sample
   end
 end
