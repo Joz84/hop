@@ -1,6 +1,10 @@
 class WebsitesController < ApplicationController
   layout 'builder'
 
+  def index
+    @websites = current_user.websites
+  end
+
   def edit
     @templates = Template.all
     @website = Website.find(params[:id])
