@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171121101358) do
+ActiveRecord::Schema.define(version: 20171123144401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20171121101358) do
 
   create_table "websites", force: :cascade do |t|
     t.string "title"
-    t.binary "background_image"
+    t.string "background_image"
     t.binary "profile_image"
     t.text "description"
     t.string "facebook_url"
