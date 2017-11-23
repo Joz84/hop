@@ -1,9 +1,21 @@
 <div class="panel">
-
   <%= simple_form_for @website, url: website_path(@website),remote: true, html: { class: 'template-form' } do |f| %>
-    <!-- display name by default -->
-    <%= f.input :template_id, collection: @templates, as: :radio_buttons, label: 'Select your template'%>
+    <!--display name by default -->
+    <div id="style-inputs">
+      <%= f.input :template_id, collection: @templates, as: :radio_buttons, label: 'Select your template'%>
+    </div>
+    <div id="edit-inputs">
+      <%= f.input :title, value: 'enter a title' %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :background_image, as: :file %>
+      <%= f.input :profile_image, as: :file %>
+      <%= f.input :facebook_url %>
+      <%= f.input :twitter_url %>
+      <%= f.input :email %>
+    </div>
+    <div id="publish-inputs">
+      <%= f.input :url %>
+    </div>
     <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Save template' %>
   <% end %>
-
 </div>
