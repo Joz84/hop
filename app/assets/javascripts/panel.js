@@ -6,10 +6,10 @@
 //       switch (i) {
 //         case 0:
 //           console.log(templateButton[i])
-//           builderWebsite.innerHTML = "<#%= escape_javascript render(:partial => 'templates/template_north') %>";
+//           builderWebsite.innerHTML = "<%#= escape_javascript render(:partial => 'templates/template_north') %>";
 //         break;
 //         case 1:
-//           builderWebsite.innerHTML = "<#%= escape_javascript render(:partial => 'templates/template_south') %>";
+//           builderWebsite.innerHTML = "<%#= escape_javascript render(:partial => 'templates/template_south') %>";
 //         break;
 //         case 2:
 
