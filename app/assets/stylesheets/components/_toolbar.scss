@@ -15,11 +15,12 @@
 
       a {
         color: $light-black;
-        &:hover {
+        &:hover, &:focus {
           color: $white;
           text-decoration: none;
         }
       }
+      
       &.toolbar-menu-item-active a {
         color: $white;
       }
