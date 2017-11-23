@@ -2,7 +2,7 @@ const submitButton = document.querySelector('#website-submit');
 const toolbarItems = document.querySelectorAll('.toolbar li');
 const activeClass = 'toolbar-menu-item-active';
 
-submitButton.addEventListener('click', (e) => {
+submitButton.addEventListener('click', () => {
 
   if (toolbarItems[0].classList.contains(activeClass)) {
 
