@@ -6,6 +6,7 @@
   box-shadow: none;
   height: calc(100% - 70px);
   margin: 0;
+  overflow-y: scroll;
   padding: 25px;
   width: 100%;
   @media(min-width: 480px) {
