@@ -2,6 +2,7 @@ class WebsitesController < ApplicationController
   layout 'builder'
 
   def edit
+    @templates = Template.all
     @website = Website.find(params[:id])
   end
 
