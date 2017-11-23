@@ -1,6 +1,6 @@
 <div class="panel">
-  <%= simple_form_for @website, url: website_path(@website),remote: true, html: { class: 'template-form' } do |f| %>
-
+  <%= simple_form_for @website, url: website_path(@website), remote: true, html: { class: 'template-form' } do |f| %>
+    <!--display name by default -->
     <div id="style-inputs">
       <h3>Choose your template</h3>
       <%= f.input :template_id, collection: @templates, as: :radio_buttons, label: false %>
