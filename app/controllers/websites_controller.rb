@@ -1,9 +1,20 @@
 class WebsitesController < ApplicationController
   layout 'builder'
 
+  def edit
+    @website = Website.find(website_params)
+  end
+
+  def update
+
+  end
+
   def new
-    @templates = Template.all
-    @website = Website.new
+    # @templates = Template.all
+    # @website = Website.new
+    website = Website.new(template_id: 1, user_id: current_user.id)
+    website.save
+    redirect_to edit_website_path(website)
   end
 
   def create
@@ -27,6 +38,7 @@ class WebsitesController < ApplicationController
   private
 
   def website_params
-    params.require(:website).permit(:template_id)
+    ActionController::Parameters.permit_all_parameters = true
+    # params.require(:website).permit(:template_id, :id)
   end
 end
