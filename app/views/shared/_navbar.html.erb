@@ -1,10 +1,14 @@
 <div class="navbar-home">
-  <%= link_to '#' do %>
+  <%= link_to root_path do %>
     <%= image_tag 'logo-white.png' %>
   <% end %>
 
   <ul>
-    <li><%= link_to 'Log in', '#', class: 'link' %></li>
-    <li><%= link_to 'Dashboard', '#', class: 'link' %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to 'Dashboard', '#', class: 'link' %></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, class: 'link', method: :delete %></li>
+    <% else %>
+      <li><%= link_to 'Sign in', new_user_session_path, class: 'link' %></li>
+    <% end %>
   </ul>
 </div>

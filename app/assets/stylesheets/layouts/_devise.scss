@@ -1,0 +1,19 @@
+.devise-wrapper {
+  background: $black;
+  height: 100vh;
+
+  .devise-content {
+    margin-top: 100px;
+
+    h2 {
+      color: $white;
+    }
+
+    a {
+      color: $green;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
