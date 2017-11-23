@@ -1,13 +1,16 @@
 form {
+
   label {
     color: $white;
     font-weight: lighter;
   }
+
   input:focus {
     outline: none !important;
   }
+
   &.template-form {
-    
+
     .radio label {
       border: 1px solid $green;
       border-radius: 4px;
