@@ -2,10 +2,13 @@
   <%= simple_form_for @website, url: website_path(@website), remote: true, html: { class: 'template-form' } do |f| %>
     <!--display name by default -->
     <div id="style-inputs">
-      <%= f.input :template_id, collection: @templates, as: :radio_buttons, label: 'Select your template'%>
+      <h3>Choose your template</h3>
+      <%= f.input :template_id, collection: @templates, as: :radio_buttons, label: false %>
     </div>
+
     <div id="edit-inputs">
-      <%= f.input :title, value: 'enter a title' %>
+      <h3>Edit your content</h3>
+      <%= f.input :title %>
       <%= f.input :description, as: :text %>
       <%= f.input :background_image, as: :file %>
       <%= f.input :profile_image, as: :file %>
@@ -13,9 +16,12 @@
       <%= f.input :twitter_url %>
       <%= f.input :email %>
     </div>
+
     <div id="publish-inputs">
-      <%= f.input :url %>
+      <h3>Choose your custom URL</h3>
+      <%= f.input :url, label: false %>
     </div>
+
     <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Save template' %>
   <% end %>
 </div>

@@ -1,5 +1,11 @@
 form {
 
+  h3 {
+    color: $white;
+    font-weight: lighter;
+    margin-top: 0;
+  }
+
   label {
     color: $white;
     font-weight: lighter;
@@ -11,6 +17,25 @@ form {
 
   &.template-form {
 
+    label[for=website_background_image], label[for=website_profile_image] {
+      width: 100%;
+      &::after {
+        border: 1px solid $green;
+        border-radius: 4px;
+        content: 'Select a file from your computer';
+        display: block;
+        margin-top: 5px;
+        padding: 10px 50px;
+        text-align: center;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input[name='website[background_image]'], input[name='website[profile_image]'] {
+      display: none;
+    }
     .radio label {
       border: 1px solid $green;
       border-radius: 4px;
