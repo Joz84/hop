@@ -1,12 +1,14 @@
 .panel {
   background: $black;
+  border: none;
   border-bottom: 1px solid $light-black;
+  border-radius: 0;
+  box-shadow: none;
   height: calc(100% - 70px);
+  margin: 0;
   padding: 25px;
-  position: fixed;
-  right: 0;
   width: 100%;
   @media(min-width: 480px) {
-    width: 400px;
+    width: 30%;
   }
 }

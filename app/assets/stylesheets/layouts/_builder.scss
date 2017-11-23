@@ -1,5 +1,6 @@
 .builder-wrapper {
-  background: AliceBlue;
+  display: flex;
+  flex-wrap: wrap;
   height: 100vh;
 
   .builder-website {
@@ -7,15 +8,12 @@
     width: 100%;
     overflow: auto;
 
-      .template-flex {
-        bottom: 70px;
-      }
+    @media (min-width: 480px) {
+      width: 70%;
+    }
   }
 
   .toolbar {
-    bottom: 0;
-    position: fixed;
     width: 100%;
   }
 }
-
