@@ -29,7 +29,7 @@ class WebsitesController < ApplicationController
   end
 
   def create
-    @website = current_user.websites.create(template: random_template)
+    @website = current_user.websites.create(template: Template.first)
     redirect_to edit_website_path(@website)
   end
 

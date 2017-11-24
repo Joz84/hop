@@ -1,5 +1,5 @@
-let tooltip = document.querySelector(".tooltip-welcome");
-let crossClose = tooltip.querySelector(".cross-icon");
+var tooltip = document.querySelector(".tooltip-welcome");
+var crossClose = tooltip.querySelector(".cross-icon");
 crossClose.addEventListener("click", function(){
   tooltip.classList.add("toolhide");
 });
