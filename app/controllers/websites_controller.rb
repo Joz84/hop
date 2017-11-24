@@ -13,18 +13,17 @@ class WebsitesController < ApplicationController
   def update
     @website = Website.find(params[:id])
     @website.update(website_params)
-    raise
-    if @website.save
-      respond_to do |format|
-        format.html { redirect_to root_path }
-        format.js
-      end
-    else
-      respond_to do |format|
-        format.html { render 'update' }
-        format.js
-      end
-    end
+    # if @website.save
+    #   respond_to do |format|
+    #     format.html { redirect_to root_path }
+    #     format.js
+    #   end
+    # else
+    #   respond_to do |format|
+    #     format.html { render 'update' }
+    #     format.js
+    #   end
+    # end
     # redirect_to edit_website_path(@website)
   end
 
