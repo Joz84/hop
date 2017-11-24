@@ -23,6 +23,8 @@ submitButton.addEventListener('click', function() {
     editInputs.style.display = 'block';
     publishInputs.style.display = 'none';
 
+    submitButton.value = 'Save content';
+
   } else if (toolbarItems[1].classList.contains(activeClass)) {
 
     toolbarItems[1].classList.remove(activeClass);
@@ -31,6 +33,8 @@ submitButton.addEventListener('click', function() {
     styleInputs.style.display = 'none';
     editInputs.style.display = 'none';
     publishInputs.style.display = 'block';
+
+    submitButton.value = 'Publish website';
 
   }
 
@@ -47,6 +51,8 @@ toolbarItems[0].addEventListener('click', function() {
   editInputs.style.display = 'none';
   publishInputs.style.display = 'none';
 
+  submitButton.value = 'Select template';
+
 });
 
 // Apply 'Edit' layout
@@ -60,6 +66,8 @@ toolbarItems[1].addEventListener('click', function() {
   editInputs.style.display = 'block';
   publishInputs.style.display = 'none';
 
+  submitButton.value = 'Save content';
+
 });
 
 // Apply 'Publish' layout
@@ -72,5 +80,7 @@ toolbarItems[2].addEventListener('click', function() {
   styleInputs.style.display = 'none';
   editInputs.style.display = 'none';
   publishInputs.style.display = 'block';
+
+  submitButton.value = 'Publish website';
 
 });
