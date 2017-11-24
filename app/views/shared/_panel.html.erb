@@ -3,7 +3,11 @@
     <!--display name by default -->
     <div id="style-inputs">
       <h3>Choose your template</h3>
-      <%= f.input :template_id, collection: @templates, as: :radio_buttons, label: false %>
+      <%= f.input :template_id, label: false do %>
+        <%= f.collection_radio_buttons :template_id, @templates, :id, :name, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
+          <%= b.radio_button(data: { template: b.object.slug }) %> <%= b.object.name %>
+        <% end %>
+      <% end %>
     </div>
 
     <div id="edit-inputs">
