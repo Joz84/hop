@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+  layout 'website', only: [:redirect]
   layout 'builder'
 
   def index
@@ -40,10 +41,14 @@ class WebsitesController < ApplicationController
     render json: { html: template_html }.to_json
   end
 
+  def redirect
+    @website = Website.find_by_url(params[:url])
+  end
+
   private
 
   def website_params
-    params.require(:website).permit(:template_id)
+    params.require(:website).permit(:template_id, :url)
   end
 
   def random_template

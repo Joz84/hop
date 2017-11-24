@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       get "template" => "websites#template"
     end
   end
+
+  get '/:url' => 'websites#redirect'
 end
