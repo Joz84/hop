@@ -12,18 +12,18 @@
 
     <div id="edit-inputs">
       <h3>Edit your content</h3>
-      <%= f.input :title %>
-      <%= f.input :description, as: :text %>
+      <%= f.input :title, placeholder: "Hi ! I'm a ..." %>
+      <%= f.input :description, as: :text, placeholder: 'Websites did not need to be...' %>
       <%= f.input :background_image, as: :file %>
       <%= f.input :profile_image, as: :file %>
-      <%= f.input :facebook_url %>
-      <%= f.input :twitter_url %>
-      <%= f.input :email %>
+      <%= f.input :facebook_url, placeholder: 'https://facebook.com/...'%>
+      <%= f.input :twitter_url, placeholder: 'https://twitter.com/...'%>
+      <%= f.input :email, placeholder: 'name@example.com'%>
     </div>
 
     <div id="publish-inputs">
       <h3>Choose your custom URL</h3>
-      <%= f.input :url, label: false %>
+      <%= f.input :url, label: false, placeholder: 'myaddress' %>
     </div>
 
     <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
