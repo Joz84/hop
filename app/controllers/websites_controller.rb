@@ -48,7 +48,7 @@ class WebsitesController < ApplicationController
   private
 
   def website_params
-    params.require(:website).permit(:template_id, :url)
+    params.require(:website).permit(:template_id, :title, :background_image, :profile_image, :description, :facebook_url, :twitter_url, :email, :url)
   end
 
   def random_template
