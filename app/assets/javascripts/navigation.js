@@ -14,19 +14,19 @@ publishInputs.style.display = 'none';
 // appropriate inputs on submit
 submitButton.addEventListener('click', () => {
 
-  if (toolbarItems[0].classList.contains(`'${activeClass}'`)) {
+  if (toolbarItems[0].classList.contains(activeClass)) {
 
-    toolbarItems[0].classList.remove(`'${activeClass}'`);
-    toolbarItems[1].classList.add(`'${activeClass}'`);
+    toolbarItems[0].classList.remove(activeClass);
+    toolbarItems[1].classList.add(activeClass);
 
     styleInputs.style.display = 'none';
     editInputs.style.display = 'block';
     publishInputs.style.display = 'none';
 
-  } else if (toolbarItems[1].classList.contains(`'${activeClass}'`)) {
+  } else if (toolbarItems[1].classList.contains(activeClass)) {
 
-    toolbarItems[1].classList.remove(`'${activeClass}'`);
-    toolbarItems[2].classList.add(`'${activeClass}'`);
+    toolbarItems[1].classList.remove(activeClass);
+    toolbarItems[2].classList.add(activeClass);
 
     styleInputs.style.display = 'none';
     editInputs.style.display = 'none';
@@ -39,9 +39,9 @@ submitButton.addEventListener('click', () => {
 // Apply 'Style' layout
 toolbarItems[0].addEventListener('click', () => {
 
-  toolbarItems[0].classList.add(`'${activeClass}'`);
-  toolbarItems[1].classList.remove(`'${activeClass}'`);
-  toolbarItems[2].classList.remove(`'${activeClass}'`);
+  toolbarItems[0].classList.add(activeClass);
+  toolbarItems[1].classList.remove(activeClass);
+  toolbarItems[2].classList.remove(activeClass);
 
   styleInputs.style.display = 'block';
   editInputs.style.display = 'none';
@@ -52,9 +52,9 @@ toolbarItems[0].addEventListener('click', () => {
 // Apply 'Edit' layout
 toolbarItems[1].addEventListener('click', () => {
 
-  toolbarItems[0].classList.remove(`'${activeClass}'`);
-  toolbarItems[1].classList.add(`'${activeClass}'`);
-  toolbarItems[2].classList.remove(`'${activeClass}'`);
+  toolbarItems[0].classList.remove(activeClass);
+  toolbarItems[1].classList.add(activeClass);
+  toolbarItems[2].classList.remove(activeClass);
 
   styleInputs.style.display = 'none';
   editInputs.style.display = 'block';
@@ -65,9 +65,9 @@ toolbarItems[1].addEventListener('click', () => {
 // Apply 'Publish' layout
 toolbarItems[2].addEventListener('click', () => {
 
-  toolbarItems[0].classList.remove(`'${activeClass}'`);
-  toolbarItems[1].classList.remove(`'${activeClass}'`);
-  toolbarItems[2].classList.add(`'${activeClass}'`);
+  toolbarItems[0].classList.remove(activeClass);
+  toolbarItems[1].classList.remove(activeClass);
+  toolbarItems[2].classList.add(activeClass);
 
   styleInputs.style.display = 'none';
   editInputs.style.display = 'none';
