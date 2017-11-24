@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+  layout 'website', only: [:redirect]
   layout 'builder'
 
   def index
@@ -33,10 +34,14 @@ class WebsitesController < ApplicationController
     # end
   end
 
+  def redirect
+    @website = Website.find_by_url(params[:url])
+  end
+
   private
 
   def website_params
-    params.require(:website).permit(:template_id)
+    params.require(:website).permit(:template_id, :url)
   end
 
   def random_template

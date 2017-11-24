@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :websites, only: [:index, :create, :edit, :update]
+
+  get '/:url' => 'websites#redirect'
 end
