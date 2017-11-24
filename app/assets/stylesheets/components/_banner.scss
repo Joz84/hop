@@ -5,9 +5,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 100vh;
+  height: auto;
+  padding: 100px 0;
   @media(min-width: 768px) {
     height: 600px;
+    padding: 0;
   }
 
   .banner-content {
