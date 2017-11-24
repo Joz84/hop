@@ -2,8 +2,29 @@
   <%#= render 'tooltips/tooltip_navigate' %>
   <%= render 'tooltips/tooltip_welcome' %>
   <div class="builder-website">
-    <%= render 'templates/template_east' %>
+    <%= render 'templates/template_north' %>
   </div>
   <%= render 'shared/panel' %>
   <%= render 'shared/toolbar' %>
 </div>
+
+<% content_for(:after_js) do %>
+  <script>
+    $(document).ready(function(){
+      $('.website_template_id input').change(function(e) {
+        // $('.builder-website') replace with spinner
+        var template = $(this).data('template');
+        var url = "/websites/<%= @website.id %>/template";
+        $.ajax({
+          url: url,
+          dataType: "json",
+          data: { template_slug: template },
+          success: function(data) {
+            $('.builder-website').html(data.html);
+          }
+        });
+      });
+    });
+  </script>
+<% end %>
+
