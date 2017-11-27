@@ -5,7 +5,7 @@
 // });
 
 var tooltipNavigate = document.querySelector(".tooltip-navigate");
-console.log(tooltipNavigate)
+
 var crossCloseNavigate = tooltipNavigate.querySelector(".cross-icon");
 crossCloseNavigate.addEventListener("click", function(){
   tooltipNavigate.style.display = 'none';

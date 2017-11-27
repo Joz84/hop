@@ -1,26 +1,28 @@
-<div class="template-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= asset_path 'Background_4.jpg' %>');" >
+<div class="template-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= asset_path 'Background_3.jpg' %>');" >
 
-    <%= link_to "https://github.com/dhh", target: :_blank do %>
-      <%= image_tag 'Profile_Reka.jpg', class: 'template-photo'%>
+  <%= image_tag 'Profile_Reka.jpg'%>
+
+  <h1><%= @website.title %></h1>
+
+  <p><%= @website.description %></p>
+
+  <div>
+    <% if (!@website.facebook_url.empty?)%>
+      <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
+        <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+      <% end %>
     <% end %>
 
-  <div class="template-title">
-    <h1>Reka Kulinyi 💻</h1>
-  </div>
-
-  <div class="template-description">
-    <p>I worked in the health care sector. I want to learn to code because I am in interested in web development and I would like to pursue a career in this sector after the bootcamp.</p>
-  </div>
-
-  <div class="template-network">
-    <%= link_to "#", target: :_blank do %>
-      <i class="fa fa-facebook-official fa-2x icon-color" aria-hidden="true"></i>
+    <% if (!@website.twitter_url.empty? )%>
+      <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
+      <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+      <% end %>
     <% end %>
-    <%= link_to "#", target: :_blank do %>
-      <i class="fa fa-envelope-o fa-2x icon-color" aria-hidden="true"></i>
-    <% end %>
-    <%= link_to "#", target: :_blank do %>
-      <i class="fa fa-twitter-square fa-2x icon-color" aria-hidden="true"></i>
+
+    <% if (!@website.email.empty? )%>
+      <%= link_to "mailto:#{@website.email}", target: :_blank do %>
+        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+      <% end %>
     <% end %>
   </div>
 </div>
