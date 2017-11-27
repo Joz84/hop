@@ -33,9 +33,10 @@
 
   submitButton.addEventListener('click', function() {
     if ((toolbarItems[2].classList.contains(activeClass))&&(urlBox.value !== "")) {
-      // Redirect to the user website
-        window.open(`${root_url}${urlBox.value}`)
-    }
+      // Redirect to the current user website
+      // window.open('<%= "#{root_url}#{@website.url}" %>')
+      window.open(`<%= root_url %>${urlBox.value}`)
+      }
   });
 
   </script>
