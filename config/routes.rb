@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount Attachinary::Engine => "/attachinary"
+
   devise_for :users
   root to: 'pages#home'
 
@@ -9,4 +12,5 @@ Rails.application.routes.draw do
   end
 
   get '/:url' => 'websites#redirect'
+
 end
