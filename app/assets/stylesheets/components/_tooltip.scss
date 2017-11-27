@@ -4,18 +4,18 @@
   box-shadow: 1px 1px 1px 1px rgba($black, 0.4);
   background-color: $black;
   color: $white;
-  display: none;
   border-radius: 5px;
   width: 350px;
+  padding: 3px;
   z-index: 1;
 
   .tooltip-content {
   position: relative;
-  padding: 2px;
   padding: 5px;
 
     .tooltip-head {
       display: flex;
+      padding: 3px;
       align-items: center;
       justify-content: space-between;
       border-bottom: 2px $primary solid;
@@ -56,8 +56,4 @@
     left: 10px;
   }
 
-}
-
-.toolhide {
-  display: none;
 }
