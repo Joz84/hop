@@ -7,7 +7,7 @@ class WebsitesController < ApplicationController
   end
 
   def show
-
+    @website = Website.find_by_url(params[:url])
   end
 
   def edit

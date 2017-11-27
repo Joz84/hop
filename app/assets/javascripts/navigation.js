@@ -37,6 +37,9 @@ submitButton.addEventListener('click', function() {
 
     submitButton.value = 'Publish website';
 
+  } else if (toolbarItems[2].classList.contains(activeClass)) && (urlBox.length !== 0) {
+    // Redirect to the user website
+      window.open()
   }
 
 });
@@ -87,9 +90,6 @@ toolbarItems[2].addEventListener('click', function() {
 });
 
 
-// Redirect to the user website
-if toolbarItems[2].classList.contains(activeClass) && (urlBox.length !== 0) {
-  window.open(url)
-}
+
 
 

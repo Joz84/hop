@@ -1,0 +1,26 @@
+<div class="template-flex" style="background-image: url('<%= asset_path 'Background_4.jpg' %>') ;" >
+
+    <%= link_to "https://github.com/dhh", target: :_blank do %>
+      <%= image_tag 'Profile_Reka.jpg', class: 'template-photo'%>
+    <% end %>
+
+  <div class="template-title">
+    <h1><%= @website.title %></h1>
+  </div>
+
+  <div class="template-description">
+    <p><%= @website.description %></p>
+  </div>
+
+  <div class="template-network">
+    <%= link_to "#", target: :_blank do %>
+      <i class="fa fa-facebook-official fa-2x icon-color" aria-hidden="true"></i>
+    <% end %>
+    <%= link_to "#", target: :_blank do %>
+      <i class="fa fa-envelope-o fa-2x icon-color" aria-hidden="true"></i>
+    <% end %>
+    <%= link_to "#", target: :_blank do %>
+      <i class="fa fa-twitter-square fa-2x icon-color" aria-hidden="true"></i>
+    <% end %>
+  </div>
+</div>
