@@ -1,6 +1,7 @@
 var submitButton = document.querySelector('#website-submit');
 var toolbarItems = document.querySelectorAll('.toolbar li');
 var activeClass = 'toolbar-menu-item-active';
+var urlBox = document.getElementById('website_url')
 
 var styleInputs = document.querySelector('#style-inputs');
 var editInputs = document.querySelector('#edit-inputs');
@@ -84,3 +85,11 @@ toolbarItems[2].addEventListener('click', function() {
   submitButton.value = 'Publish website';
 
 });
+
+
+// Redirect to the user website
+if toolbarItems[2].classList.contains(activeClass) && (urlBox.length !== 0) {
+  window.open(url)
+}
+
+

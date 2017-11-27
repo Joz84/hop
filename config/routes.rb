@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/:url' => 'websites#redirect'
+  get '/:url' => 'websites#show'
 end

@@ -6,6 +6,10 @@ class WebsitesController < ApplicationController
     @websites = current_user.websites
   end
 
+  def show
+
+  end
+
   def edit
     @templates = Template.all
     @website = Website.find(params[:id])
