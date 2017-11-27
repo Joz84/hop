@@ -39,7 +39,7 @@
         <div class="col-sm-6 col-md-3">
           <div class="process-card">
             <p class="step">1</p>
-            <%= image_tag "Logo_Style_black.png", class: 'process-logo-resize', id: 'logo-style' %>
+            <%= link_to image_tag("Logo_Style_black.png", class: "process-logo-resize", id: "logo-style"), websites_path, method: :post %>
             <h3>Choose a style</h3>
             <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-card-arrow hidden-xs' %>
           </div>

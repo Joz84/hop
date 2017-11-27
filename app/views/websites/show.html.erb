@@ -1,6 +1,22 @@
-<div class="template-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= asset_path 'Background_2.jpg' %>');" >
+<!-- Condition statement upon templates choice -->
+<!-- Fix the CSS classes variables upon templates choice -->
 
-  <%= image_tag 'Profile_Alexandre.jpg', class: 'template-photo' %>
+<% case @website.template.name %>
+<% when 'north' %>
+  <% @template = "template-container" %>
+<% when 'south' %>
+  <% @template = "template-container" %>
+<% when 'west' %>
+  <% @template = "template-container" %>
+<% when 'east' %>
+  <% @template = "template-container" %>
+<% end %>
+
+
+<div class='<%= @template %>' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_tag @website.background_image.path %>');" >
+
+  <%= cl_image_tag @website.profile_image.path, class: 'template-photo' %>
+
   <h1><%= @website.title %></h1>
 
   <p><%= @website.description %></p>
