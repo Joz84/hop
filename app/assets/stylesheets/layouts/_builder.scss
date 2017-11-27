@@ -5,8 +5,9 @@
 
   .builder-website {
     height: calc(100vh - 70px);
-    width: 100%;
     overflow: auto;
+    position: relative;
+    width: 100%;
 
     @media (min-width: 480px) {
       width: 70%;
