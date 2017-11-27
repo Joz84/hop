@@ -23,7 +23,8 @@
 
     <div id="publish-inputs">
       <h3>Choose your custom URL</h3>
-      <%= f.input :url, label: false, placeholder: 'myaddress' %>
+      <%= f.input :url, label: false, placeholder: 'MyAddress' %>
+      <p>Your address will appear in the following format: 'https://www.apphop.io/<span>'MyAddress'</span></p>
     </div>
 
     <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
