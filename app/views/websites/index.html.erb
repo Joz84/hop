@@ -1,7 +1,32 @@
-<h1>My websites</h1>
-
-<ul>
-  <% @websites.each do |website| %>
-    <li><%= website %></li>
-  <% end %>
-</ul>
+<div class="websites-wrapper">
+  <%= render 'shared/navbar' %>
+  <div class="container">
+    <div class="websites-list">
+      <h1>My websites</h1>
+      <div class="row">
+        <div class="col-sm-4">
+          <%= button_to 'Create new', websites_path, class: 'button' %>
+        </div>
+        <div class="col-sm-8">
+          <div class="row">
+            <% @websites.each do |website| %>
+            <div class="col-sm-12">
+              <div class="website">
+                <h2><%#= website.title.empty? ? 'No title yet!' : website.title %></h2>
+                <h2>Hello world
+                  <%= link_to edit_website_path(website) do %>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                  <% end %>
+                </h2>
+                <ul>
+                  <li>Template: "<%= website.template.name %>"</li>
+                  <li>Link: <%= link_to "#{root_url}#{website.url}", "#{root_url}#{website.url}" %></li>
+                </ul>
+              </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
