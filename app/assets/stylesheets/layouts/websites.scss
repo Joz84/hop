@@ -1,0 +1,32 @@
+.websites-wrapper {
+  background: $black;
+  color: $white;
+
+  .websites-list {
+    margin: 100px 0 0 0;
+
+    h1 {
+      margin: 50px 0;
+    }
+
+    .website {
+      border: 1px solid $green;
+      border-radius: 4px;
+      margin: 20px 0;
+      padding: 25px;
+
+      a {
+        color: $green;
+      }
+
+      h2 {
+        font-size: 32px;
+        margin: 0 0 15px 0;
+
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
