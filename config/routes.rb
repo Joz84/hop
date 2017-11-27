@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :websites, only: [:index, :show, :create, :edit, :update] do
     member do
-      get "template" => "websites#template"
+      get 'template' => 'websites#template'
     end
   end
 

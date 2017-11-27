@@ -1,8 +1,8 @@
 <div class="builder-wrapper">
-  <%#= render 'tooltips/tooltip_navigate' %>
-  <%= render 'tooltips/tooltip_welcome' %>
+  <%= render 'tooltips/tooltip_navigate' %>
+  <%#= render 'tooltips/tooltip_welcome' %>
   <div class="builder-website">
-    <%= render 'templates/template_north' %>
+    <%= render "templates/#{@website.template.slug}" %>
   </div>
   <%= render 'shared/panel' %>
   <%= render 'shared/toolbar' %>
@@ -40,4 +40,3 @@
 
   </script>
 <% end %>
-
