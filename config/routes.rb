@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/:url' => 'websites#redirect'
+
+  mount Attachinary::Engine => "/attachinary"
+
 end
