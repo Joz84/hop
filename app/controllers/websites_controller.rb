@@ -14,6 +14,7 @@ class WebsitesController < ApplicationController
   def update
     @website = Website.find(params[:id])
     @website.update(website_params)
+
     # if @website.save
     #   respond_to do |format|
     #     format.html { redirect_to root_path }
@@ -48,7 +49,15 @@ class WebsitesController < ApplicationController
   private
 
   def website_params
-    params.require(:website).permit(:template_id, :title, :background_image, :profile_image, :description, :facebook_url, :twitter_url, :email, :url)
+    params.require(:website).permit(:template_id,
+                                    :title,
+                                    :description,
+                                    :background_image,
+                                    :profile_image,
+                                    :facebook_url,
+                                    :twitter_url,
+                                    :email,
+                                    :url)
   end
 
   def random_template
