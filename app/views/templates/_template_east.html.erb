@@ -7,20 +7,20 @@
   <p><%= @website.description %></p>
 
   <div>
-    <% if !@website.facebook_url.empty? %>
-      <%= link_to "#", target: :_blank do %>
+    <% if (!@website.facebook_url.empty?)%>
+      <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
         <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
       <% end %>
     <% end %>
 
-    <% if !@website.twitter_url.empty? %>
-      <%= link_to "#", target: :_blank do %>
+    <% if (!@website.twitter_url.empty? )%>
+      <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
       <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
       <% end %>
     <% end %>
 
-    <% if !@website.email.empty? %>
-      <%= link_to "#", target: :_blank do %>
+    <% if (!@website.email.empty? )%>
+      <%= link_to "mailto:#{@website.email}", target: :_blank do %>
         <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
       <% end %>
     <% end %>
