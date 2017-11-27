@@ -11,33 +11,3 @@
 <% when 'east' %>
   <% @template = "template-container" %>
 <% end %>
-
-
-<div class='<%= @template %>' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_tag @website.background_image.path %>');" >
-
-  <%= cl_image_tag @website.profile_image.path, class: 'template-photo' %>
-
-  <h1><%= @website.title %></h1>
-
-  <p><%= @website.description %></p>
-
-  <div>
-    <% if (!@website.facebook_url.empty?)%>
-      <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
-        <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-      <% end %>
-    <% end %>
-
-    <% if (!@website.twitter_url.empty? )%>
-      <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
-      <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-      <% end %>
-    <% end %>
-
-    <% if (!@website.email.empty? )%>
-      <%= link_to "mailto:#{@website.email}", target: :_blank do %>
-        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
-      <% end %>
-    <% end %>
-  </div>
-</div>
