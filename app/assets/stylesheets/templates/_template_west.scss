@@ -85,9 +85,31 @@
       display: flex;
       justify-content: space-around;
       min-width: 90%;
+      z-index: 1;
+
+      .losange-container {
+        position: relative;
+      }
+
+      .losange-icon {
+        position: absolute;
+        top: 45%;
+        left: 20%;
+
+        .fa-twitter, .fa-facebook, .fa-envelope-o {
+          color: #8AAE92;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
     }
   }
 }
+
+
+
 
 
 

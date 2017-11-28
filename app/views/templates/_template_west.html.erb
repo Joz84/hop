@@ -11,38 +11,46 @@
     </div>
 
     <div class="social">
-      <div class="losange-small">
-        <% if (!@website.facebook_url.empty?)%>
-          <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
-          <div class="los1">
-            <i class="fa fa-facebook los1" aria-hidden="true"></i>
-          </div>
+
+      <div class="losange-container">
+        <div class="losange-small">
+            <div class="los1"></div>
+        </div>
+        <div class="losange-icon">
+          <% if (!@website.facebook_url.empty?)%>
+            <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
 
-      <div class="losange-small">
-        <% if (!@website.twitter_url.empty?)%>
-          <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
-
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-
+      <div class="losange-container">
+        <div class="losange-small">
+            <div class="los1"></div>
+        </div>
+        <div class="losange-icon">
+          <% if (!@website.twitter_url.empty?)%>
+            <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
 
-      <div class="losange-small">
-        <% if (!@website.email.empty?)%>
-          <%= link_to "mailto:#{@website.email}", target: :_blank do %>
-
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-
+      <div class="losange-container">
+        <div class="losange-small">
+            <div class="los1"></div>
+        </div>
+        <div class="losange-icon">
+          <% if (!@website.email.empty?)%>
+            <%= link_to "mailto:#{@website.email}", target: :_blank do %>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
 
     </div>
-
   </div>
-
 </div>
