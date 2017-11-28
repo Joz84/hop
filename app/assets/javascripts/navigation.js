@@ -84,8 +84,3 @@ toolbarItems[2].addEventListener('click', function() {
   submitButton.value = 'Publish website';
 
 });
-
-
-
-
-

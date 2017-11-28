@@ -1,0 +1,51 @@
+.template-north {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  @media(min-width: 768px) {
+    padding: 50px;
+  }
+
+  .box {
+    align-items: center;
+    background: rgba(white, 0.9);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 25px;
+    width: 100%;
+
+    h1 {
+      font-family: 'Open sans', sans-serif;
+      font-size: 24px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+    }
+
+    p {
+      color: lighten($black, 30%);
+      font-weight: lighter;
+      line-height: 1.6em;
+      margin: 25px 0;
+    }
+
+    a {
+      color: lighten($black, 30%);
+      font-size: 20px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+}
