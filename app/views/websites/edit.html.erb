@@ -13,10 +13,6 @@
 
 <% content_for(:after_js) do %>
   <script>
-    var toolbarItems = document.querySelectorAll('.toolbar li');
-    var activeClass = 'toolbar-menu-item-active';
-    var urlBox = document.getElementById('website_url');
-    var submitButton = document.querySelector('#website-submit');
 
     $(document).ready(function(){
       $('.website_template_id input').change(function(e) {
@@ -38,13 +34,6 @@
       });
     });
 
-  submitButton.addEventListener('click', function() {
-    if ((toolbarItems[2].classList.contains(activeClass))&&(urlBox.value !== "")) {
-      // Redirect to the current user website
-      // window.open('<%= "#{root_url}#{@website.url}" %>')
-      window.open(`<%= root_url %>${urlBox.value}`)
-      }
-  });
 
   </script>
 <% end %>
