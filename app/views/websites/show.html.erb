@@ -3,11 +3,11 @@
 
 <% case @website.template.name %>
 <% when 'north' %>
-  <% @template = "template-container" %>
+  <%= render 'templates/template_north' %>
 <% when 'south' %>
-  <% @template = "template-container" %>
+  <%= render 'templates/template_south' %>
 <% when 'west' %>
-  <% @template = "template-container" %>
+  <%= render 'templates/template_west' %>
 <% when 'east' %>
-  <% @template = "template-container" %>
+  <%= render 'templates/template_east' %>
 <% end %>

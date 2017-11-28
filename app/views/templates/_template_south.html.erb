@@ -1,6 +1,6 @@
-<div class="template-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= asset_path 'Background_2.jpg' %>');" >
+<div class="template-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_path_or_default @website.background_image %>');" >
 
-  <%= image_tag 'Profile_Alexandre.jpg', class: 'template-photo' %>
+  <%= cl_image_tag_or_default(@website.profile_image, class: 'template-photo') %>
   <h1><%= @website.title %></h1>
 
   <p><%= @website.description %></p>
