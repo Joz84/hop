@@ -1,6 +1,6 @@
 <div class="template-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_path_or_default @website.background_image %>');" >
-  <%= cl_image_tag_or_default(@website.profile_image, class: 't-profile-south') %>
   <div class="template-south">
+  <%= cl_image_tag_or_default(@website.profile_image, class: 't-profile-south') %>
     <div class="template-south h1">
       <h1><%= @website.title %></h1>
     </div>
