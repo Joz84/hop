@@ -1,27 +1,29 @@
-<div class="template-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_path_or_default @website.background_image %>');" >
+<div class="template-container template-north" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_path_or_default @website.background_image %>');" >
 
-  <%= cl_image_tag_or_default(@website.profile_image, class: 'template-photo') %>
-  <h1><%= @website.title %></h1>
+  <div class="box">
+    <%= cl_image_tag_or_default(@website.profile_image, class: 'template-photo') %>
+    <h1><%= @website.title %></h1>
 
-  <p><%= @website.description %></p>
+    <p><%= @website.description %></p>
 
-  <div>
-    <% if (!@website.facebook_url.empty?)%>
-      <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
-        <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+    <div>
+      <% if (!@website.facebook_url.empty?)%>
+        <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        <% end %>
       <% end %>
-    <% end %>
 
-    <% if (!@website.twitter_url.empty? )%>
-      <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
-      <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+      <% if (!@website.twitter_url.empty? )%>
+        <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <% end %>
       <% end %>
-    <% end %>
 
-    <% if (!@website.email.empty? )%>
-      <%= link_to "mailto:#{@website.email}", target: :_blank do %>
-        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+      <% if (!@website.email.empty? )%>
+        <%= link_to "mailto:#{@website.email}", target: :_blank do %>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
