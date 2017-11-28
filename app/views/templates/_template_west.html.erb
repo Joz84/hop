@@ -1,8 +1,11 @@
 <div class="template-west" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= cl_image_path_or_default @website.background_image %>');" >
 
   <div class="container-half">
-    <div class="losange">
-        <%= cl_image_tag_or_default(@website.profile_image, class: 'los1 img') %>
+
+    <div class="profile">
+      <div class="profile-losange">
+        <%= cl_image_tag_or_default(@website.profile_image, class: 'image-rotate')  %>
+      </div>
     </div>
 
     <div class="box">
@@ -11,46 +14,24 @@
     </div>
 
     <div class="social">
-
-      <div class="losange-container">
-        <div class="losange-small">
-            <div class="los1"></div>
-        </div>
-        <div class="losange-icon">
           <% if (!@website.facebook_url.empty?)%>
             <%= link_to "https://facebook.com/#{@website.facebook_url}", target: :_blank do %>
               <i class="fa fa-facebook" aria-hidden="true"></i>
             <% end %>
           <% end %>
-        </div>
-      </div>
 
-      <div class="losange-container">
-        <div class="losange-small">
-            <div class="los1"></div>
-        </div>
-        <div class="losange-icon">
           <% if (!@website.twitter_url.empty?)%>
             <%= link_to "https://twitter.com/#{@website.twitter_url}", target: :_blank do %>
               <i class="fa fa-twitter" aria-hidden="true"></i>
             <% end %>
           <% end %>
-        </div>
-      </div>
 
-      <div class="losange-container">
-        <div class="losange-small">
-            <div class="los1"></div>
-        </div>
-        <div class="losange-icon">
           <% if (!@website.email.empty?)%>
             <%= link_to "mailto:#{@website.email}", target: :_blank do %>
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
             <% end %>
           <% end %>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </div>
