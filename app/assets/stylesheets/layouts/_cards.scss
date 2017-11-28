@@ -1,5 +1,17 @@
+.cards-wrapper {
+  margin: 0 0 50px 0;
+  padding: 20px 0;
+  align-items: center;
+  background-color: $hop-gray;
+  border: 1px solid $primary;
+}
+
+.cards-title {
+  margin-top: 20px;
+}
+
 .cards-section {
-  margin: 100px 0;
+  margin: 40px 0;
 
   h2 {
     font-size: 38px;
