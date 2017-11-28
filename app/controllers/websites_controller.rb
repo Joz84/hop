@@ -21,24 +21,10 @@ class WebsitesController < ApplicationController
     @website.template = @template
     @website.update(website_params)
 
-    # if @website.save
-    #   respond_to do |format|
-    #     format.html { redirect_to root_path }
-    #     format.js
-    #   end
-    # else
-    #   respond_to do |format|
-    #     format.html { render 'update' }
-    #     format.js
-    #   end
-    # end
-    # redirect_to edit_website_path(@website)
-
     respond_to do |format|
       format.html { redirect_to edit_website_path(@website) }
       format.js
     end
-
   end
 
   def create
@@ -61,18 +47,16 @@ class WebsitesController < ApplicationController
   private
 
   def website_params
-    params.require(:website).permit(:template_id,
-                                    :title,
-                                    :description,
-                                    :background_image,
-                                    :profile_image,
-                                    :facebook_url,
-                                    :twitter_url,
-                                    :email,
-                                    :url)
-  end
-
-  def random_template
-    Template.all.sample
+    params.require(:website).permit(
+      :template_id,
+      :title,
+      :description,
+      :background_image,
+      :profile_image,
+      :facebook_url,
+      :twitter_url,
+      :email,
+      :url
+    )
   end
 end
