@@ -12,7 +12,7 @@ module ApplicationHelper
     if image
       cl_image_tag image.path, options
     else
-      image_tag "http://res.cloudinary.com/dy4rog9h0/image/upload/v1511798148/ymvxzef4dpputt1com2w.jpg"
+      image_tag "http://res.cloudinary.com/dy4rog9h0/image/upload/v1511798148/ymvxzef4dpputt1com2w.jpg", options
     end
   end
 
