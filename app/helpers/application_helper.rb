@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def title(text)
+    content_for :title, text
+  end
+
   def cl_image_path_or_default(image, options = {})
     if image
       cl_image_path image.path, options
