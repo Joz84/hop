@@ -6,7 +6,7 @@
   color: $white;
   border-radius: 5px;
   width: 350px;
-  display: none;
+
   padding: 3px;
   z-index: 1;
 
@@ -49,12 +49,27 @@
   }
   &.tooltip-navigate {
     bottom: 80px;
-    left: 10px;
+    left: 400px;
+    opacity: 0;
+    transition: 1000ms ease;
+    &.tooltip-navigate-open {
+      opacity: 100;
+    }
+    @media(max-width: 768px) {
+      display: none;
+      }
   }
 
   &.tooltip-welcome {
-    bottom: 500px;
+    top: 180px;
     left: 10px;
+    transform: translateX(-200%);
+    transition: 1200ms ease transform 1s;
+    &.tooltip-welcome-open {
+      transform: translateX(0);
+    }
+    @media(max-width: 768px) {
+      display: none;
+    }
   }
-
 }
