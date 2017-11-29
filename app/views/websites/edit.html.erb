@@ -13,6 +13,40 @@
 
 <% content_for(:after_js) do %>
   <script>
+    var toolbarItems = document.querySelectorAll('.toolbar li');
+    var styleButtons = document.querySelectorAll("input[name='website[template_id]']");
+    var editInputs = document.querySelector('#edit-inputs');
+    var formDescriptionField = document.querySelector("textarea[name='website[description]']");
+    var templateDescription = document.querySelector('.description-clicked');
+
+    function editOnClick() {
+      templateDescription.addEventListener('click', function() {
+        toolbarItems[0].classList.remove(activeClass);
+        toolbarItems[1].classList.add(activeClass);
+
+        styleInputs.style.display = 'none';
+        editInputs.style.display = 'block';
+        publishInputs.style.display = 'none';
+
+        var formDescriptionField = document.querySelector("textarea[name='website[description]']");
+        formDescriptionField.focus();
+        formDescriptionField.select();
+      });
+    };
+
+    editOnClick();
+
+    for (var i = 1; i < styleButtons.length; i++) {
+      styleButtons[i].addEventListener("click", function() {
+        setTimeout(function() {
+          templateDescription = document.querySelector('.description-clicked');
+        }, 500);
+        setTimeout(function() {
+          editOnClick();
+        }, 500);
+      });
+    };
+
 
     $(document).ready(function(){
       $('.website_template_id input').change(function(e) {
