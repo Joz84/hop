@@ -1,5 +1,4 @@
 class WebsitesController < ApplicationController
-  layout 'website', only: [:redirect]
   layout 'builder', only: [:edit]
 
   def index
@@ -38,10 +37,6 @@ class WebsitesController < ApplicationController
     template_slug = params[:template_slug]
     template_html = render_to_string partial: "templates/#{template_slug}", website: @website
     render json: { html: template_html }.to_json
-  end
-
-  def redirect
-    @website = Website.find_by_url(params[:url])
   end
 
   private
