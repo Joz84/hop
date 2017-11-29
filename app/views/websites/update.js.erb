@@ -5,7 +5,7 @@ var builderWebsite = document.querySelector('.builder-website');
 builderWebsite.innerHTML = '<%= j render "templates/#{@website.template.slug}" %>';
 
 if ((toolbarItems[2].classList.contains(activeClass))&&(urlBox.value !== "")) {
-  var redirectLink = document.querySelector('.redirect-link');
+  var redirectLink = document.querySelector('.result');
   redirectLink.style.display = 'block';
   redirectLink.setAttribute('href', '<%= "#{root_url}#{@website.url}" %>');
 }
