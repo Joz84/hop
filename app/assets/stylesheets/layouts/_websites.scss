@@ -1,6 +1,7 @@
 .websites-wrapper {
   background: $black;
   color: $white;
+  min-height: 100vh;
 
   .websites-list {
     margin: 100px 0 0 0;
@@ -29,7 +30,7 @@
       i {
         color: $green;
       }
-      
+
       &.button {
         width: 100%;
       }
