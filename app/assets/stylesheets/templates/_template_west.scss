@@ -20,6 +20,21 @@
       margin: 0 auto;
       transform-origin: 50% 50%;
       overflow: hidden;
+      width: 130px;
+      height: 130px;
+      border: 1px solid #8AAE92;
+
+      .losange-img {
+        transform: scale(0.6) rotate(-45deg) translateY(-100px) translateX(20px);
+      }
+
+      &:hover {
+        border: 2px solid $primary ;
+        opacity: 0.9;
+      }
+    }
+
+    .losange-small {
       width: 100px;
       height: 100px;
       transform: rotate(45deg) translateY(10px);
