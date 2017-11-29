@@ -6,6 +6,7 @@
   background-size: cover;
   display: flex;
   height: auto;
+  justify-content: center;
   padding: 100px 0;
   @media(min-width: 768px) {
     height: 600px;
@@ -30,7 +31,7 @@
     .intro {
       font-size: 24px;
       margin: 50px 0;
-      color: $white;
+      color: rgba($light-gray, 0.6);
     }
   }
 }
