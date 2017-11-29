@@ -1,6 +1,6 @@
 class WebsitesController < ApplicationController
   layout 'website', only: [:redirect]
-  layout 'builder'
+  layout 'builder', only: [:edit]
 
   def index
     @websites = current_user.websites
