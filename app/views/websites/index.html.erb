@@ -6,27 +6,32 @@
     <div class="websites-list">
       <h1>My websites</h1>
       <div class="row">
+        <% @websites.each do |website| %>
         <div class="col-sm-4">
-          <%= button_to 'Create new', websites_path, class: 'button' %>
-        </div>
-        <div class="col-sm-8">
-          <div class="row">
-            <% @websites.each do |website| %>
-            <div class="col-sm-12">
-              <div class="website">
-                <h2><%#= website.title.empty? ? 'No title yet!' : website.title %></h2>
-                <h2>Hello world
-                  <%= link_to edit_website_path(website) do %>
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  <% end %>
-                </h2>
-                <ul>
-                  <li>Template: "<%= website.template.name %>"</li>
-                  <li>Link: <%= link_to "#{root_url}#{website.url}", "#{root_url}#{website.url}" %></li>
-                </ul>
-              </div>
+          <div class="website">
+            <h2><%= website.title %></h2>
+            <ul class="list-inline list-unstyled">
+              <li>
+                <%= link_to "#{root_path}#{website.url}", target: '_blank' do %>
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to edit_website_path(website) do %>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                <% end %>
+              </li>
+              <!-- <li>
+                <%= link_to '#' do %>
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <% end %>
+              </li> -->
+            </ul>
           </div>
-          <% end %>
+        </div>
+        <% end %>
+        <div class="col-sm-4">
+          <%= button_to 'Create new', websites_path, class: 'website button' %>
         </div>
       </div>
     </div>

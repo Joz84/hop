@@ -10,11 +10,10 @@ class Website < ApplicationRecord
   private
 
   def set_default
-    self.title = 'John Doe'
-    self.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus, nisi ut commodo tincidunt, dui nisl fringilla leo, ut luctus velit diam id sem. Donec ipsum diam, sagittis sed auctor in, laoreet vitae mauris. Proin venenatis gravida tincidunt. Pellentesque vel facilisis lorem. Proin ut ipsum id velit bibendum scelerisque.'
-    self.facebook_url = 'zuck'
-    self.twitter_url = 'jack'
-    self.email = 'john@doe.com'
+    self.title = 'Dorothée'
+    self.description = 'After making my beginnings at the theater, I was successful thanks to television in the 80s-90s where I was found on Recré A2 and Le Club Dorothée. Otherwise I love to sing and my real name is Frédérique Hoschedé.'
+    self.facebook_url = 'dorothee'
+    self.twitter_url = '@dorothee'
+    self.email = 'dorothee@gmail.com'
   end
-
 end
