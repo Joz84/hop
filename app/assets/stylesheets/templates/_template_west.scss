@@ -27,12 +27,15 @@
       height: 130px;
       border: 1px solid #8AAE92;
 
+      .losange-img {
+
+      }
+
       &:hover {
         border: 2px solid $primary ;
         opacity: 0.9;
       }
     }
-
 
     .losange-small {
       transform: rotate(45deg) translateY(10px);
