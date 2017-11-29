@@ -5,6 +5,23 @@
   justify-content: center;
   height: 70px;
 
+  .btn-gray {
+    border-radius: 5px;
+    background-color: $black;
+    border: solid 1px $white;
+    padding: 4px 12px;
+    color: $white;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+
+    &:hover {
+      background-color: $hop-gray;
+      text-decoration: none;
+      color: $black;
+    }
+  }
+
   .toolbar-menu {
     margin: 0;
     padding: 0;
@@ -20,7 +37,7 @@
           text-decoration: none;
         }
       }
-      
+
       &.toolbar-menu-item-active a {
         color: $white;
       }
