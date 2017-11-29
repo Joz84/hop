@@ -16,7 +16,7 @@
       <p>Add your information to <span>populate your new website</span>.</p>
       <%= f.input :title, placeholder: "Hi ! I'm a ..." %>
       <%= f.input :description, as: :text, placeholder: 'Websites did not need to be...', input_html: {rows: 10} %>
-      <%= f.input :background_image, as: :attachinary %>
+      <%= f.input :background_image, as: :attachinary, cloudinary: { transformation: {opacity: 50}} %>
       <%= f.input :profile_image, as: :attachinary %>
       <%= f.input :facebook_url, placeholder: 'john.doe' %>
       <p>Add what's after the <span>https://facebook.com/</span>.</p>
