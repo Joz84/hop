@@ -7,21 +7,14 @@
     let elem = document.getElementById("logo-style");
     let elm = document.getElementById("logo-edit");
 
-    if (elem.src == "<%= image_url 'Logo_Style_black.png' %>" ) {
-      elem.src = "<%= image_url 'Logo_Style_primary.png' %>"  ;
-    } else if (elem.src == "<%= image_url 'Logo_Style_primary.png' %>") {
-      elem.src = "<%= image_url 'Logo_Style_secondary.png' %>" ;
+    if (elem.src == "<%= image_url 'cube-style-black.png' %>" ) {
+      elem.src = "<%= image_url 'cube-style-primary.png' %>"  ;
+    } else if (elem.src == "<%= image_url 'cube-style-primary.png' %>") {
+      elem.src = "<%= image_url 'cube-style-secondary.png' %>" ;
     } else {
-      elem.src = "<%= image_url 'Logo_Style_black.png' %>";
+      elem.src = "<%= image_url 'cube-style-black.png' %>";
     }
   }
-
-  //   if (elm.src == "http://localhost:3000/assets/Logo_Edit_black-90bb740b2b1beecd9671440301cd43d9c5bbd0057bab0a1a9101acdd38214498.png") {
-  //     elm.src = "http://localhost:3000/assets/Logo_Edit2_black-e319cf5f9540e91260f73ec2c4f114133a1165778426afc32a9d5177d1c38945.png"
-  //   } else {
-  //     elm.src = "http://localhost:3000/assets/Logo_Edit_black-90bb740b2b1beecd9671440301cd43d9c5bbd0057bab0a1a9101acdd38214498.png"
-  //   }
-  // }
 
   function stopTextColor() {
   clearInterval(intervalID);
@@ -39,34 +32,34 @@
         <div class="col-sm-6 col-md-3">
           <div class="process-card">
             <p class="step">1</p>
-            <%= link_to image_tag("Logo_Style_black.png", class: "process-logo-resize", id: "logo-style"), websites_path, method: :post %>
+            <%= link_to image_tag("cube-style-black.png", class: "process-logo-resize", id: "logo-style"), websites_path, method: :post %>
             <h3>Choose a style</h3>
-            <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-card-arrow hidden-xs' %>
+            <%= image_tag "arrow-primary.png", class: 'process-card-arrow hidden-xs' %>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-3">
           <div class="process-card">
             <p class="step">2</p>
-            <%= image_tag "Logo_Edit_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "cube-edit.png", class: 'process-logo-resize' %>
             <h3>Edit your infos</h3>
-            <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-card-arrow hidden-xs' %>
+            <%= image_tag "arrow-primary.png", class: 'process-card-arrow hidden-xs' %>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-3">
           <div class="process-card">
             <p class="step">3</p>
-            <%= image_tag "Logo_Address_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "cube-url.png", class: 'process-logo-resize' %>
             <h3>Add an address</h3>
-            <%= image_tag "Logo_Arrow_2_primary.png", class: 'process-card-arrow hidden-xs' %>
+            <%= image_tag "arrow-primary.png", class: 'process-card-arrow hidden-xs' %>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-3">
           <div class="process-card">
             <p class="step">4</p>
-            <%= image_tag "Logo_Finished_black.png", class: 'process-logo-resize' %>
+            <%= image_tag "cube-website.png", class: 'process-logo-resize' %>
             <h3>Have your website</h3>
           </div>
         </div>
