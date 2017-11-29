@@ -1,0 +1,10 @@
+Searching 154 files for "template1"
+
+/Users/numajequier/code/numanosk/hop/app/views/pages/home.html.erb:
+   14          <div class="col-sm-4">
+   15            <div class="card">
+   16:             <div class="card-background" style="background-image: url(<%= image_path 'template1.png' %>);">
+   17              </div>
+   18              <h3>John's pro website</h3>
+
+1 match in 1 file
