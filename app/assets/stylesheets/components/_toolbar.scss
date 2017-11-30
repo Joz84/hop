@@ -2,23 +2,27 @@
   align-items: center;
   background: $black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 70px;
 
-  .btn-gray {
-    border-radius: 5px;
-    background-color: $black;
-    border: solid 1px $white;
-    padding: 4px 12px;
-    color: $white;
-    position: absolute;
-    left: 10px;
-    bottom: 20px;
-
+  .home-button {
+    color: $light-black;
+    margin: 0 0 0 25px;
+    transition: all 0.3s ease;
     &:hover {
-      background-color: $hop-gray;
-      text-decoration: none;
-      color: $black;
+      color: $white;
+    }
+  }
+
+  .mobile-button {
+    color: $light-black;
+    margin: 0 25px 0 0;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $white;
+    }
+    &.mobile-active {
+      color: $white;
     }
   }
 
@@ -32,6 +36,7 @@
 
       a {
         color: $light-black;
+        transition: all 0.3s ease;
         &:hover, &:focus {
           color: $white;
           text-decoration: none;

@@ -1,16 +1,116 @@
 .builder-wrapper {
   display: flex;
   flex-wrap: wrap;
+  overflow: scroll;
   height: 100vh;
 
-  .builder-website {
-    height: calc(100vh - 70px);
-    overflow: auto;
+  .mobile-wrapper {
     position: relative;
-    width: 100%;
-
     @media (min-width: 480px) {
       width: 70%;
+    }
+
+    .builder-website {
+      height: calc(100vh - 70px);
+      overflow: scroll;
+      position: relative;
+      width: 100%;
+
+      &.mobile-active {
+        height: 440px;
+        position: absolute;
+        top: calc(50% - 226px);
+        left: calc(50% - 152.5px);
+        min-height: auto;
+        width: 305px;
+        z-index: 1;
+      }
+    }
+
+    .mobile-elements {
+      border-radius: 42px;
+      border-bottom: 80px solid #202020;
+      border-right: 10px solid #202020;
+      border-left: 10px solid #202020;
+      border-top: 80px solid #202020;
+      display: none;
+      height: 600px;
+      width: 325px;
+      position: absolute;
+      left: calc(50% - 162.5px);
+      top: calc(50% - 306px);
+      z-index: 1;
+
+      .mobile-home-button {
+        align-items: center;
+        border-bottom: 1px solid darken($gray, 10%);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #3f3f3f;
+        position: absolute;
+        bottom: -65px;
+        left: calc(50% - 25px);
+
+        .square {
+          border: 2px solid $white;
+          border-radius: 4px;
+          height: 22px;
+          width: 22px;
+        }
+      }
+
+      .speaker {
+        background: #3f3f3f;
+        border-radius: 10px;
+        height: 8px;
+        position: absolute;
+        top: -30px;
+        left: calc(50% - 21px);
+        width: 42px;
+      }
+
+      .camera {
+        background: #3f3f3f;
+        border-radius: 50%;
+        height: 8px;
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 4px);
+        width: 8px;
+      }
+
+      .lock {
+        background: #202020;
+        border-radius: 2px 2px 0 0;
+        height: 3px;
+        position: absolute;
+        top: -83px;
+        left: 240px;
+        width: 25px;
+      }
+
+      .volume-up {
+        background: #202020;
+        border-radius: 2px 0 0 2px;
+        height: 25px;
+        position: absolute;
+        top: 10px;
+        left: -13px;
+        width: 3px;
+      }
+
+      .volume-down {
+        background: #202020;
+        border-radius: 2px 0 0 2px;
+        height: 25px;
+        position: absolute;
+        top: 55px;
+        left: -13px;
+        width: 3px;
+      }
     }
   }
 

@@ -2,10 +2,7 @@
 
   .content {
     color: $white;
-    padding: 20px;
-    @media(min-width: 768px) {
-      padding: 50px;
-    }
+    padding: 25px;
 
     .template-photo {
       border-radius: 4px;
@@ -22,7 +19,7 @@
       font-family: "Raleway";
       font-size: 20px;
       letter-spacing: 1px;
-      line-height: 1.8em;
+      line-height: 1.6em;
       margin: 25px 0;
       max-width: 600px;
     }

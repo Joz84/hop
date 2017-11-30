@@ -1,3 +1,6 @@
+<% twitter_link = "https://twitter.com/home?status=Take%20a%20look%20at%20the%20website%20I%20made%20with%20Hop%3A%20#{root_url}#{@website.url}%20%23HopYourWebsite" %>
+<% facebook_link = "https://www.facebook.com/sharer/sharer.php?u=#{root_url}#{@website.url}" %>
+
 <div class="panel">
   <%= simple_form_for @website, url: website_path(@website), remote: true, html: { class: 'template-form' } do |f| %>
     <!--display name by default -->
@@ -18,9 +21,9 @@
       <%= f.input :description, as: :text, placeholder: 'Websites did not need to be...', input_html: {rows: 10} %>
       <%= f.input :background_image, as: :attachinary, cloudinary: { transformation: {opacity: 50}} %>
       <%= f.input :profile_image, as: :attachinary %>
-      <%= f.input :facebook_url, placeholder: 'john.doe' %>
+      <%= f.input :facebook_url, placeholder: 'john.doe', label: 'Facebook username' %>
       <p>Add what's after the <span>https://facebook.com/</span>.</p>
-      <%= f.input :twitter_url, placeholder: '@johndoe' %>
+      <%= f.input :twitter_url, placeholder: '@johndoe', label: 'Twitter username' %>
       <p>Add your Twitter <span>@username</span>.</p>
       <%= f.input :email, placeholder: 'john@doe.com' %>
     </div>
@@ -34,5 +37,13 @@
     <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
   <% end %>
 
-  <%= link_to 'See your website', '#', target: '_blank', class: 'redirect-link' %>
+  <div class="result">
+    <%= link_to 'See your website', '#', target: '_blank', class: 'link button' %>
+    <%= link_to facebook_link, target: '_blank', class: 'link button facebook-link' do %>
+      <i class="fa fa-facebook" aria-hidden="true"></i> Share
+    <% end %>
+    <%= link_to twitter_link, target: '_blank', class: 'link button twitter-link' do %>
+      <i class="fa fa-twitter" aria-hidden="true"></i> Tweet
+    <% end %>
+  </div>
 </div>
