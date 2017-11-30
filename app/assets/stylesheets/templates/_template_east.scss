@@ -27,6 +27,16 @@
       max-width: 600px;
     }
 
+    .title-clicked:hover {
+      color: #fff;
+      background: $primary;
+    }
+
+    .description-clicked:hover {
+      color: #fff;
+      background: $primary;
+    }
+
     .links {
       align-items: center;
       display: flex;

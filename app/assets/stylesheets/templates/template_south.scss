@@ -20,6 +20,15 @@
     color: $gray;
     background-color: rgba(250, 250, 250, 0.3);
   }
+  .title-clicked:hover {
+    color: #fff;
+    background: $primary;
+  }
+
+  .description-clicked:hover {
+    color: #fff;
+    background: $primary;
+  }
 }
 
 .t-profile-south {
