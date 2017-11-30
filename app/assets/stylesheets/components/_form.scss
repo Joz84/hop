@@ -22,7 +22,7 @@ form {
       &::after {
         border: 1px solid $green;
         border-radius: 4px;
-        content: 'Select a file from your computer';
+        content: 'Select a file from your device';
         display: block;
         margin-top: 5px;
         padding: 10px 50px;
@@ -45,13 +45,30 @@ form {
     }
   }
 }
-.redirect-link {
-  color: $green;
+.result {
+  border-top: 1px solid $light-gray;
   display: none;
-  margin: 50px 0;
-  text-align: center;
-  &:hover {
-    color: darken($green, 10%);
-    text-decoration: none;
+  margin: 25px 0;
+  padding: 25px 0;
+
+  .link {
+    display: block;
+    margin: 0 0 25px 0;
+    text-align: center;
+    width: 100%;
+
+    &.facebook-link {
+      background: #3B5998;
+      &:hover {
+        background: darken(#3B5998, 10%) !important;
+      }
+    }
+
+    &.twitter-link {
+      background: #1DA1F2;
+      &:hover {
+        background: darken(#1DA1F2, 10%) !important;
+      }
+    }
   }
 }
