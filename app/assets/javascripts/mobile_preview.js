@@ -6,6 +6,7 @@ mobileButton.addEventListener('click', function(e) {
   e.preventDefault;
 
   websiteContainer.classList.toggle('mobile-active');
+  mobileButton.classList.toggle('mobile-active');
 
   if (mobileLayout.style.display === "block") {
       mobileLayout.style.display = "none";
