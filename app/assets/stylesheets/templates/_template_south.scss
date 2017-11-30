@@ -31,13 +31,11 @@
     background-color: rgba(250, 250, 250, 0.3);
   }
   .title-clicked:hover {
-    color: #fff;
-    background: $primary;
+    cursor: pointer;
   }
 
   .description-clicked:hover {
-    color: #fff;
-    background: $primary;
+    cursor: pointer;
   }
 }
 
