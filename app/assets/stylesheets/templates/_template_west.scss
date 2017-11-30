@@ -1,53 +1,41 @@
+.mobile-active {
+
+  .template-west {
+    
+    .container-half {
+      width: 90%;
+    }
+  }
+}
+
 .container-half {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #F5E1DA;
   opacity: 0.85;
-  min-width: 70%;
-  max-width: 70%;
+  width: 70%;
 
   @media(max-width: 768px) {
     width: 100%;
   }
 
-  .profile {
-    margin: 0 auto;
-    text-align:center;
-    padding: 30px;
+  .losange {
+    transform: rotate(45deg) translateY(10px);
+    margin: 30px auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    border: 1px solid #8AAE92;
 
-    .profile-losange {
-      margin: 0 auto;
-      transform-origin: 50% 50%;
-      overflow: hidden;
-      width: 130px;
-      height: 130px;
-      border: 1px solid #8AAE92;
-
-      .losange-img {
-        transform: scale(0.6) rotate(-45deg) translateY(-100px) translateX(20px);
-      }
-
-      &:hover {
-        border: 2px solid $primary ;
-        opacity: 0.9;
-      }
+    .losange-img {
+      transform: scale(0.6) rotate(-45deg) translateY(-100px) translateX(20px);
     }
 
-    .losange-small {
-      width: 100px;
-      height: 100px;
-      transform: rotate(45deg) translateY(10px);
-
-      &:hover {
-        border: 1px solid $primary;
-      }
-
-      .image-rotate {
-        width: 355px;
-        height: 355px;
-        transform: rotate(-45deg) translateY(-74px);
-      }
+    &:hover {
+      border: 2px solid $primary ;
+      opacity: 0.9;
     }
   }
 
@@ -105,4 +93,3 @@
     }
   }
 }
-

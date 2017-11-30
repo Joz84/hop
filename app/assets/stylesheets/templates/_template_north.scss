@@ -1,11 +1,8 @@
 .template-north {
   align-items: center;
-  display: flex;
   justify-content: center;
   padding: 25px;
-  @media(min-width: 768px) {
-    padding: 50px;
-  }
+  text-align: center;
 
   .content {
     align-items: center;
