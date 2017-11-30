@@ -1,11 +1,10 @@
 .tooltip-container {
   position: absolute;
-  text-align: center;
-  box-shadow: 1px 1px 1px 1px rgba($black, 0.4);
+  box-shadow: 1px 1px 1px 0px rgba($black, 0.4);
   background-color: $black;
   color: $white;
-  border-radius: 5px;
-  width: 350px;
+  border-radius: 3px;
+  width: 280px;
 
   padding: 3px;
   z-index: 1;
@@ -22,15 +21,16 @@
       border-bottom: 2px $primary solid;
       padding-bottom: 5px;
 
-      i {
-        color: $primary;
+      .cross-icon {
         font-size: 1.5em;
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .tootip-title {
         font-family: Rajdhani;
         font-size: 20px;
-        font-weight: bolder;
       }
     }
 
@@ -39,6 +39,9 @@
       font-size: 16px;
       font-weight: lighter;
       margin: 8px;
+      &.tooltip-text i {
+        margin-left: 10px;
+      }
     }
 
     .right {
@@ -73,3 +76,4 @@
     }
   }
 }
+
