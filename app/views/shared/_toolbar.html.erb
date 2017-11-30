@@ -1,5 +1,7 @@
 <div class="toolbar">
-  <%= button_to 'Home', root_path, method: :get, class: 'btn-gray' %>
+  <%= link_to root_path, class: 'home-button' do %>
+  <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+  <% end %>
   <ul class="toolbar-menu">
     <li class="toolbar-menu-item toolbar-menu-item-active"><%= link_to 'Style', '#' %></li>
     <span>&gt;</span>
@@ -7,4 +9,7 @@
     <span>&gt;</span>
     <li class="toolbar-menu-item"><%= link_to 'Publish', '#' %></li>
   </ul>
+  <%= link_to '#', class: 'mobile-button hidden-xs' do %>
+    <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+  <% end %>
 </div>
