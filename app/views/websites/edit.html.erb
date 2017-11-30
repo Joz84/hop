@@ -26,6 +26,59 @@
 
 <% content_for(:after_js) do %>
   <script>
+    var toolbarItems = document.querySelectorAll('.toolbar li');
+    var styleButtons = document.querySelectorAll("input[name='website[template_id]']");
+    var editInputs = document.querySelector('#edit-inputs');
+    var templateDescription = document.querySelector('.description-clicked');
+    var templateTitle = document.querySelector('.title-clicked');
+    var formTitleField = document.querySelector("input[name='website[title]']");
+    var formDescriptionField = document.querySelector("textarea[name='website[description]']");
+
+    function editOnClick() {
+    //Upon click on description, focus in the related edit box
+      templateDescription.addEventListener('click', function() {
+        toolbarItems[0].classList.remove(activeClass);
+        toolbarItems[1].classList.add(activeClass);
+
+        styleInputs.style.display = 'none';
+        editInputs.style.display = 'block';
+        publishInputs.style.display = 'none';
+
+        var formDescriptionField = document.querySelector("textarea[name='website[description]']");
+        formDescriptionField.focus();
+        formDescriptionField.select();
+      });
+
+    //Upon click on title, focus in the related edit box
+      templateTitle.addEventListener('click', function() {
+        toolbarItems[0].classList.remove(activeClass);
+        toolbarItems[1].classList.add(activeClass);
+
+        styleInputs.style.display = 'none';
+        editInputs.style.display = 'block';
+        publishInputs.style.display = 'none';
+
+        var formTitleField = document.querySelector("input[name='website[title]']");
+        formTitleField.focus();
+        formTitleField.select();
+      });
+
+    };
+
+    editOnClick();
+
+    for (var i = 1; i < styleButtons.length; i++) {
+      styleButtons[i].addEventListener("click", function() {
+        setTimeout(function() {
+          templateDescription = document.querySelector('.description-clicked');
+          templateTitle = document.querySelector('.title-clicked');
+        }, 500);
+        setTimeout(function() {
+          editOnClick();
+        }, 500);
+      });
+    };
+
 
     $(document).ready(function(){
       $('.website_template_id input').change(function(e) {

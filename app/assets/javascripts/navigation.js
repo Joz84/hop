@@ -1,7 +1,7 @@
 var submitButton = document.querySelector('#website-submit');
 var toolbarItems = document.querySelectorAll('.toolbar li');
 var activeClass = 'toolbar-menu-item-active';
-var urlBox = document.getElementById('website_url')
+var urlBox = document.getElementById('website_url');
 
 var styleInputs = document.querySelector('#style-inputs');
 var editInputs = document.querySelector('#edit-inputs');
@@ -10,6 +10,7 @@ var publishInputs = document.querySelector('#publish-inputs');
 styleInputs.style.display = 'block';
 editInputs.style.display = 'none';
 publishInputs.style.display = 'none';
+
 
 // Change active item and show
 // appropriate inputs on submit

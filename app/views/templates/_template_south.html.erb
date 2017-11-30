@@ -2,10 +2,10 @@
   <div class="template-south">
   <%= cl_image_tag_or_default(@website.profile_image, class: 't-profile-south') %>
     <div class="template-south h1">
-      <h1><%= @website.title %></h1>
+      <h1 class="title-clicked"><%= @website.title %></h1>
     </div>
     <div class="template-south p">
-      <p><%= @website.description %></p>
+      <p class="description-clicked"><%= @website.description %></p>
     </div>
     <div class="template-south-links">
       <% if (!@website.facebook_url.empty?)%>

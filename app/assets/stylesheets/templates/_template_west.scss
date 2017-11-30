@@ -49,10 +49,16 @@
     border-bottom: 1px solid $light-green;
     padding-botton: 10px;
 
-    &:hover {
+    .title-clicked:hover {
       color: #fff;
-      background: $light-green;
+      background: $primary;
     }
+
+    .description-clicked:hover {
+      color: #fff;
+      background: $primary;
+    }
+
   }
 
   .social {
