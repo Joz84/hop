@@ -59,14 +59,14 @@ form {
 
     &.facebook-link {
       background: #3B5998;
-      &:hover {
+      &:hover, &:focus {
         background: darken(#3B5998, 10%) !important;
       }
     }
 
     &.twitter-link {
       background: #1DA1F2;
-      &:hover {
+      &:hover, &:focus {
         background: darken(#1DA1F2, 10%) !important;
       }
     }
