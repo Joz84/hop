@@ -7,5 +7,10 @@ builderWebsite.innerHTML = '<%= j render "templates/#{@website.template.slug}" %
 if ((toolbarItems[2].classList.contains(activeClass))&&(urlBox.value !== "")) {
   var redirectLink = document.querySelector('.result');
   redirectLink.style.display = 'block';
-  redirectLink.setAttribute('href', '<%= "#{root_url}#{@website.url}" %>');
+  redirectLink.setAttribute('href', '<%= "https://www.apphop.io/#{@website.url}" %>');
+
+  var userWebsiteLink = document.querySelectorAll('.result a');
+  userWebsiteLink[0].setAttribute('href', '<%= "https://www.apphop.io/#{@website.url}" %>');
+  userWebsiteLink[1].setAttribute('href', '<%= "https://www.facebook.com/sharer/sharer.php?u=#{root_url}#{@website.url}" %>');
+  userWebsiteLink[2].setAttribute('href', '<%= "https://twitter.com/home?status=Take%20a%20look%20at%20the%20website%20I%20made%20with%20Hop%3A%20#{root_url}#{@website.url}%20%23HopYourWebsite" %>');
 }
