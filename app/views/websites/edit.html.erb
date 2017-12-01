@@ -48,6 +48,7 @@
         formDescriptionField = document.querySelector("textarea[name='website[description]']");
         formDescriptionField.focus();
         formDescriptionField.select();
+        submitButton.value = 'Save content';
       });
 
     //Upon click on title, focus in the related edit box
@@ -62,6 +63,7 @@
         var formTitleField = document.querySelector("input[name='website[title]']");
         formTitleField.focus();
         formTitleField.select();
+        submitButton.value = 'Save content';
       });
 
     };
