@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'edit', to: 'websites#edit', as: 'edit_website'
     post '/', to: 'websites#update', as: 'website'
 
+    get 'events', to: 'pages#events'
   end
 
   constraints subdomain: 'build' do
