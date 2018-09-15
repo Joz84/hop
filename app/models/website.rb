@@ -6,6 +6,7 @@ class Website < ApplicationRecord
 
   has_attachment :background_image
   has_attachment :profile_image
+  has_attachment :banner_background
 
   private
 
