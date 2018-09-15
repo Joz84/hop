@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+  before_action :set_tenant, only: :show
   skip_before_action :authenticate_user!, only: :show
   layout 'builder', only: [:edit]
 
@@ -7,7 +8,7 @@ class WebsitesController < ApplicationController
   end
 
   def show
-    @website = Website.find_by_url(params[:url])
+    @website = Website.find_by_url(current_tenant)
   end
 
   def edit
