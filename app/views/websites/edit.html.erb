@@ -17,7 +17,8 @@
       <div class="volume-down"></div>
     </div>
     <div class="builder-website">
-      <%= render "templates/#{@website.template.slug}" %>
+      <%= render "website_components/banner", website: @website %>
+      <%#= render "templates/#{@website.template.slug}" %>
     </div>
   </div>
   <%= render 'shared/panel' %>

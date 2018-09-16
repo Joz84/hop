@@ -14,7 +14,14 @@
       <% end %>
     </div>
 
+    <div class="edit-banner">
+
+    </div>
+
     <div id="edit-inputs">
+      <%= f.input :banner_title, placeholder: "Coco" %>
+      <%= f.input :banner_punchline, as: :text, placeholder: 'Websites did not need to be...' %>
+      <%= f.input :banner_background, as: :attachinary, cloudinary: { transformation: {opacity: 50}} %>
       <h3>Edit your content</h3>
       <p>Add your information to <span>populate your new website</span>.</p>
       <%= f.input :title, placeholder: "Hi ! I'm a ..." %>
