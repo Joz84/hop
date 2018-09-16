@@ -28,6 +28,7 @@
   <script>
     var toolbarItems = document.querySelectorAll('.toolbar li');
     var styleButtons = document.querySelectorAll("input[name='website[template_id]']");
+    var colorButtons = document.querySelectorAll("input[name='style[color_id]']");
     var editInputs = document.querySelector('#edit-inputs');
     var templateDescription = document.querySelector('.description-clicked');
     var templateTitle = document.querySelector('.title-clicked');
@@ -93,25 +94,18 @@
     });
 
     $(document).ready(function(){
-      $('.website_template_id input').change(function(e) {
-
-        // Show loader
-        var loader = document.querySelector('.loader-container');
-        loader.style.display = 'flex';
+      $('.website_template_id input[name="website[template_id]"]').change(function(e) {
         var template = $(this).data('template');
-        var url = "/websites/<%= @website.id %>/template";
-        $.ajax({
-          url: url,
-          dataType: "json",
-          data: { template_slug: template },
-          success: function(data) {
-            $('.builder-website').html(data.html);
-            loader.style.display = 'none';
-          }
-        });
+        structure_sheet = document.querySelector('#structure_sheet');
+        structure_sheet.href = template
+      });
+      $('.style_color_id input[name="style[color_id]"]').change(function(e) {
+        console.log(e.target);
+        var style = $(this).data('style');
+        color_sheet = document.querySelector('#style_sheet');
+        color_sheet.href = style
       });
     });
-
 
   </script>
 <% end %>

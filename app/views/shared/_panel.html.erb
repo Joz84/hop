@@ -3,48 +3,61 @@
 
 <div class="panel">
   <%= simple_form_for @website, url: website_path(@website), remote: true, html: { class: 'template-form' } do |f| %>
-    <!--display name by default -->
-    <div id="style-inputs">
-      <h3>Choose your template</h3>
-      <p>Try out the different designs to <span>find the one that matches with your tastes</span>.</p>
-      <%= f.input :template_id, label: false do %>
-        <%= f.collection_radio_buttons :template_id, @templates, :id, :name, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
-          <%= b.radio_button(data: { template: b.object.slug }) %> <%= b.object.name.capitalize %>
-        <% end %>
+  <!--display name by default -->
+  <div id="style-inputs">
+    <h3>Choose your template</h3>
+    <p>Try out the different designs to <span>find the one that matches with your tastes</span>.</p>
+    <%= f.input :template_id, label: false do %>
+    <%= f.collection_radio_buttons :template_id, @templates, :id, :name, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
+    <%= b.radio_button(data: { template: b.object.slug }) %> <%= b.object.name.capitalize %>
+    <% end %>
+    <% end %>
+
+    <!-- NOT GOOD NEED data attribute -->
+
+
+    <%= simple_form_for :style do |f| %>
+    <%= f.input :color_id, label: false do %>
+      <% @styles =  [ 'Green','Blue','Red' ] %>
+      <%= f.collection_radio_buttons :color_id, @styles, :to_s, :to_s, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
+      <%= b.radio_button(data: { style: b.object }) %> <%= b.object %>
       <% end %>
-    </div>
+    <% end %>
+    <% end %>
 
-    <div id="edit-inputs">
-      <h3>Edit your content</h3>
-      <p>Add your information to <span>populate your new website</span>.</p>
-      <%= f.input :title, placeholder: "Hi ! I'm a ..." %>
-      <%= f.input :description, as: :text, placeholder: 'Websites did not need to be...', input_html: {rows: 10} %>
-      <%= f.input :background_image, as: :attachinary, cloudinary: { transformation: {opacity: 50}} %>
-      <%= f.input :profile_image, as: :attachinary %>
-      <%= f.input :facebook_url, placeholder: 'john.doe', label: 'Facebook username' %>
-      <p>Add what's after the <span>https://facebook.com/</span>.</p>
-      <%= f.input :twitter_url, placeholder: '@johndoe', label: 'Twitter username' %>
-      <p>Add your Twitter <span>@username</span>.</p>
-      <%= f.input :email, placeholder: 'john@doe.com' %>
-    </div>
+  </div>
 
-    <div id="publish-inputs">
-      <h3>Choose your custom URL</h3>
-      <p>Your address will appear in the following format:<br/>https://www.apphop.io/<span>johndoe</span>.</p>
-      <%= f.input :url, label: false, placeholder: 'johndoe' %>
-    </div>
+  <div id="edit-inputs">
+    <h3>Edit your content</h3>
+    <p>Add your information to <span>populate your new website</span>.</p>
+    <%= f.input :title, placeholder: "Hi ! I'm a ..." %>
+    <%= f.input :description, as: :text, placeholder: 'Websites did not need to be...', input_html: {rows: 10} %>
+    <%= f.input :background_image, as: :attachinary, cloudinary: { transformation: {opacity: 50}} %>
+    <%= f.input :profile_image, as: :attachinary %>
+    <%= f.input :facebook_url, placeholder: 'john.doe', label: 'Facebook username' %>
+    <p>Add what's after the <span>https://facebook.com/</span>.</p>
+    <%= f.input :twitter_url, placeholder: '@johndoe', label: 'Twitter username' %>
+    <p>Add your Twitter <span>@username</span>.</p>
+    <%= f.input :email, placeholder: 'john@doe.com' %>
+  </div>
 
-    <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
+  <div id="publish-inputs">
+    <h3>Choose your custom URL</h3>
+    <p>Your address will appear in the following format:<br/>https://www.apphop.io/<span>johndoe</span>.</p>
+    <%= f.input :url, label: false, placeholder: 'johndoe' %>
+  </div>
+
+  <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
   <% end %>
 
   <div class="result">
     <p>Congrats, your website is <span>now live</span>! Feel free to share across social networks.</p>
     <%= link_to 'See your website', "#", target: '_blank', class: 'link button' %>
     <%= link_to facebook_link, target: '_blank', class: 'link button facebook-link' do %>
-      <i class="fa fa-facebook" aria-hidden="true"></i> Share
+    <i class="fa fa-facebook" aria-hidden="true"></i> Share
     <% end %>
     <%= link_to twitter_link, target: '_blank', class: 'link button twitter-link' do %>
-      <i class="fa fa-twitter" aria-hidden="true"></i> Tweet
+    <i class="fa fa-twitter" aria-hidden="true"></i> Tweet
     <% end %>
   </div>
 </div>
