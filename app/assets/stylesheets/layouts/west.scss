@@ -1,8 +1,10 @@
 .website-template-container, .builder-website {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 100%;
 
   * {
-    flex: 1;
+    flex: 1 1 100%;
   }
 }
