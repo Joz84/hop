@@ -1,6 +1,7 @@
 class WebsitesController < ApplicationController
-  before_action :set_tenant, only: :show
+  before_action :set_tenant, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: :show
+
   layout 'builder', only: [:edit]
 
   def index
@@ -13,24 +14,24 @@ class WebsitesController < ApplicationController
 
   def edit
     @templates = Template.all
-    @website = Website.find(params[:id])
+    @website = Website.find_by(url: current_tenant)
   end
 
   def update
-    @website = Website.find(params[:id])
+    @website = Website.find_by(url: current_tenant)
     @template = Template.find(params[:website][:template_id])
     @website.template = @template
     @website.update(website_params)
 
     respond_to do |format|
-      format.html { redirect_to edit_website_path(@website) }
+      format.html { redirect_to tenant_url }
       format.js
     end
   end
 
   def create
     @website = current_user.websites.create(template: Template.first)
-    redirect_to edit_website_path(@website)
+    redirect_to edit_website_path @website, host: tenant_url(@website.name)
   end
 
   # GET /websites/:id/template => { template: ":template_slug"}
