@@ -62,7 +62,8 @@ class WebsitesController < ApplicationController
       :banner_title,
       :banner_cta,
       :banner_punchline,
-      :banner_background
+      :banner_background,
+      :color_id
     )
   end
 end
