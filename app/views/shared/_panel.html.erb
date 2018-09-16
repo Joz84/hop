@@ -2,7 +2,7 @@
 <% facebook_link = "https://www.facebook.com/sharer/sharer.php?u=#{root_url}#{@website.url}" %>
 
 <div class="panel">
-  <%= simple_form_for @website, url: website_path(@website), remote: true, html: { class: 'template-form' } do |f| %>
+  <%= simple_form_for @website, url: @url, remote: true, html: { class: 'template-form' } do |f| %>
   <!--display name by default -->
   <div id="style-inputs">
     <h3>Choisissez l'apparence de votre site</h3>

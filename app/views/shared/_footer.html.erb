@@ -3,7 +3,7 @@
     <h2>Prêts à attaquer?</h2>
     <% if current_user %>
       <% if current_user.website.present? %>
-        <%= button_to 'Personnaliser mon site', edit_own_website_path(host: current_user.website.host), class: 'button' %>
+        <%= link_to 'Personnaliser mon site', edit_own_website_url(host: current_user.website.host), class: 'button' %>
       <% else %>
         <%= button_to 'Créer mon site', websites_path, method: :post, class: 'button' %>
       <% end %>

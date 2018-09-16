@@ -25,7 +25,7 @@ submitButton.addEventListener('click', function() {
     editInputs.style.display = 'block';
     publishInputs.style.display = 'none';
 
-    submitButton.value = 'Save content';
+    submitButton.value = 'Enregistrer le contenu';
 
   } else if (toolbarItems[1].classList.contains(activeClass)) {
 
@@ -36,7 +36,9 @@ submitButton.addEventListener('click', function() {
     editInputs.style.display = 'none';
     publishInputs.style.display = 'block';
 
-    submitButton.value = 'Publish website';
+    urlBox.trigger('change');
+
+    submitButton.value = 'Enregistrer';
 
   }
 });
@@ -52,7 +54,7 @@ toolbarItems[0].addEventListener('click', function() {
   editInputs.style.display = 'none';
   publishInputs.style.display = 'none';
 
-  submitButton.value = 'Select template';
+  submitButton.value = 'Séléctionner l\'agencement';
 
 });
 
@@ -67,8 +69,7 @@ toolbarItems[1].addEventListener('click', function() {
   editInputs.style.display = 'block';
   publishInputs.style.display = 'none';
 
-  submitButton.value = 'Save content';
-
+  submitButton.value = 'Enregistrer le contenu';
 });
 
 // Apply 'Publish' layout
@@ -82,6 +83,7 @@ toolbarItems[2].addEventListener('click', function() {
   editInputs.style.display = 'none';
   publishInputs.style.display = 'block';
 
-  submitButton.value = 'Publish website';
+  urlBox.trigger('change');
 
+  submitButton.value = 'Enregistrer';
 });
