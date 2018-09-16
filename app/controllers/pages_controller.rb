@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def events
-    #TODO: Sirtaki
+    @events = Event.all
   end
 end

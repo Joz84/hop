@@ -1,0 +1,16 @@
+<div class="container">
+  <% @events.each do |event| %>
+    <div class="event-card">
+      <h2><%= event.title %></h2>
+      <h3><%= event.city %></h3>
+      <hr>
+      <p><b><%= event.address %></b></p>
+      <div class="event-dates">
+        <%= event.begin_at %>
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        <%= event.end_at %>
+      </div>
+      <%= link_to "En savoir plus", "http://www.riberac-tourisme.com/fr/agenda/#{event.title.parameterize}.html?idProduit=#{event.sirtaqui_id}", class: "btn btn-success" %>
+    </div>
+  <% end %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180915205500) do
+ActiveRecord::Schema.define(version: 20180916125432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(version: 20180915205500) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "city"
+    t.float "longitude"
+    t.float "latitude"
+    t.string "address"
+    t.date "begin_at"
+    t.date "end_at"
+    t.string "sirtaqui_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "templates", force: :cascade do |t|

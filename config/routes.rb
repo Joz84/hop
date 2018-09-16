@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     root to: 'websites#show'
     get 'edit', to: 'websites#edit', as: 'edit_website'
     post '/', to: 'websites#update', as: 'website'
-
     get 'events', to: 'pages#events'
   end
 
