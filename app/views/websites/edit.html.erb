@@ -17,9 +17,10 @@
       <div class="volume-down"></div>
     </div>
     <div class="builder-website">
-      <%= render "website_components/banner", website: @website %>
-      <%= render "templates/template_west" %>
-
+      <div class="flex-container">
+        <%= render "website_components/banner", website: @website %>
+        <%= render "templates/template_west" %>
+      </div>
       <%= render "website_components/team" %>
     </div>
   </div>
