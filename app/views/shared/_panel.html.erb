@@ -13,18 +13,8 @@
     <% end %>
     <% end %>
 
-    <!-- NOT GOOD NEED data attribute -->
+    <%= f.input :color_id, label: false, collection:  [ 'Green','Blue','Red' ], as: :radio_buttons %>
 
-
-    <%= simple_form_for :style do |f| %>
-    <%= f.input :color_id, label: false do %>
-    <% @styles =  [ 'Green','Blue','Red' ] %>
-    <%= f.collection_radio_buttons :color_id, @styles, :to_s, :to_s, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
-    <%= b.radio_button(data: { style: b.object }) %> <%= b.object %>
-    <% end %>
-
-    <% end %>
-    <% end %>
 
   </div>
 
@@ -56,7 +46,6 @@
   </div>
 
   <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
-  >>>>>>> 2507188b09f4932cdfbb44637322a5ce6e592a51
   <% end %>
 
   <div class="result">

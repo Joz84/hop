@@ -53,7 +53,11 @@ class WebsitesController < ApplicationController
       :facebook_url,
       :twitter_url,
       :email,
-      :url
+      :url,
+      :banner_title,
+      :banner_cta,
+      :banner_punchline,
+      :banner_background
     )
   end
 end

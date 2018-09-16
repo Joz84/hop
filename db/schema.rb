@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180915205500) do
+ActiveRecord::Schema.define(version: 20180916102409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20180915205500) do
     t.string "banner_title"
     t.string "banner_cta"
     t.string "banner_punchline"
+    t.string "color_id"
     t.index ["template_id"], name: "index_websites_on_template_id"
     t.index ["user_id"], name: "index_websites_on_user_id"
   end

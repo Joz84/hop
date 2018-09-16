@@ -70,7 +70,7 @@
 
     };
 
-    editOnClick();
+    // editOnClick();
 
     for (var i = 1; i < styleButtons.length; i++) {
       styleButtons[i].addEventListener("click", function() {
@@ -79,7 +79,7 @@
           templateTitle = document.querySelector('.title-clicked');
         }, 500);
         setTimeout(function() {
-          editOnClick();
+          // editOnClick();
         }, 500);
       });
     };
@@ -90,21 +90,24 @@
         templateTitle = document.querySelector('.title-clicked');
       }, 500);
       setTimeout(function() {
-        editOnClick();
+        // editOnClick();
       }, 500);
     });
 
     $(document).ready(function(){
       $('.website_template_id input[name="website[template_id]"]').change(function(e) {
+        console.log($(this).data('template'));
         var template = $(this).data('template');
         structure_sheet = document.querySelector('#structure_sheet');
-        structure_sheet.href = template
+        console.log(structure_sheet);
+        structure_sheet.href = template;
       });
-      $('.style_color_id input[name="style[color_id]"]').change(function(e) {
-        console.log(e.target);
-        var style = $(this).data('style');
+      $('.website_color_id input[name="website[color_id]"]').change(function(e) {
+        console.log($(this)[0].value);
+        var style = $(this)[0].value;
         color_sheet = document.querySelector('#style_sheet');
-        color_sheet.href = style
+        console.log(color_sheet);
+        color_sheet.href = style;
       });
     });
 
