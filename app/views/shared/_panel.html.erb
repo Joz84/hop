@@ -13,7 +13,7 @@
     <% end %>
     <% end %>
 
-    <%= f.input :color_id, label: false, collection: { 'green' => 'Vert', 'blue' => 'Bleu', 'red' => 'Rouge' }, value_method: :first, label_method: :last,  as: :radio_buttons %>
+    <%= f.input :color_id, label: false, collection: { asset_path("layouts/green.scss") => 'Vert', asset_path("layouts/blue.scss") => 'Bleu', asset_path("layouts/red.scss") => 'Rouge' }, value_method: :first, label_method: :last,  as: :radio_buttons %>
 
 
   </div>
