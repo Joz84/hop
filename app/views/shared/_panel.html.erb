@@ -6,14 +6,14 @@
   <!--display name by default -->
   <div id="style-inputs">
     <h3>Choisissez l'apparence de votre site</h3>
-    <p>Essayez les différentes origanisations et <span>trouvez celle qui vous correspond le mieux</span>.</p>
+    <p>Essayez les différent thèmes et <span>trouvez celui qui vous correspond le mieux</span>.</p>
     <%= f.input :template_id, label: false do %>
       <%= f.collection_radio_buttons :template_id, @templates, :id, :name, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
-        <%= b.radio_button(data: { template: asset_path("layouts/#{b.object.slug}.scss") }) %> <%= b.object.name.capitalize %>
+        <%= b.radio_button(data: { template: asset_path("layouts/#{b.object.slug}.css") }) %> <%= b.object.name.capitalize %>
       <% end %>
     <% end %>
 
-    <%= f.input :color_id, label: false, collection: { asset_path("layouts/green.scss") => 'Vert', asset_path("layouts/blue.scss") => 'Bleu', asset_path("layouts/red.scss") => 'Rouge' }, value_method: :first, label_method: :last,  as: :radio_buttons %>
+    <%= f.input :color_id, label: false, collection: { asset_path("layouts/green.css") => 'Vert', asset_path("layouts/blue.css") => 'Bleu', asset_path("layouts/red.css") => 'Rouge' }, value_method: :first, label_method: :last,  as: :radio_buttons %>
   </div>
 
   <div class="edit-banner">
@@ -43,7 +43,7 @@
     <%= f.input :url, label: false, placeholder: 'mon-beau-gite' %>
   </div>
 
-  <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Selectionnez l\'agencement' %>
+  <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Selectionnez le thème' %>
 
   <% end %>
 
