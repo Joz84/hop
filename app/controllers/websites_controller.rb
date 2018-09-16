@@ -15,10 +15,14 @@ class WebsitesController < ApplicationController
   def edit
     @templates = Template.all
     @website = current_user.website if current_user.website&.url == current_tenant || current_user.website&.id == params[:id].to_i
+    @url = case current_tenant
+           when 'build' then website_path(@website)
+           else '/'
+           end
   end
 
   def update
-    @website = Website.find_by(url: current_tenant)
+    @website = current_user.website if current_user.website&.url == current_tenant || current_user.website&.id == params[:id].to_i
     @template = Template.find(params[:website][:template_id])
     @website.template = @template
     @website.update(website_params)

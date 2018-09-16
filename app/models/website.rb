@@ -15,7 +15,7 @@ class Website < ApplicationRecord
   end
 
   def host(domain: ENV['APPLICATION_DOMAIN'])
-    [url, domain].join('.')
+    'http://' + [url, domain].join('.')
   end
 
   private
