@@ -2,7 +2,7 @@ var toolbarItems = document.querySelectorAll('.toolbar li');
 var activeClass = 'toolbar-menu-item-active';
 var urlBox = document.getElementById('website_url');
 var builderWebsite = document.querySelector('.builder-website');
-//builderWebsite.innerHTML = '<%= j render "templates/#{@website.template.slug}" %>';
+
 
 if ((toolbarItems[2].classList.contains(activeClass))&&(urlBox.value !== "")) {
   var redirectLink = document.querySelector('.result');
