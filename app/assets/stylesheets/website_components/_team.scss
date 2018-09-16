@@ -1,0 +1,19 @@
+.employee {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.employee > img {
+   width: 200px;
+   height: 200px;
+}
+
+.employee-content {
+ max-width: 700px;
+}
+
+.employee-container {
+  padding: 30px;
+}
