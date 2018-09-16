@@ -5,9 +5,9 @@
     <% if current_user %>
       <% if website = current_user.website %>
         <% if website.url.present? %>
-          <%= link_to 'Personnaliser mon site', edit_own_website_url(host: website.host), class: 'link' %></li>
+          <%= link_to 'Personnaliser mon site', edit_own_website_url(host: website.host), class: 'button' %></li>
         <% else %>
-          <%= link_to 'Personnaliser mon site', edit_website_url(website), class: 'link' %></li>
+          <%= link_to 'Personnaliser mon site', edit_website_url(website), class: 'button' %></li>
         <% end %>
       <% else %>
         <%= button_to 'Créer mon site', websites_path, method: :post, class: 'button' %>

@@ -54,7 +54,7 @@ toolbarItems[0].addEventListener('click', function() {
   editInputs.style.display = 'none';
   publishInputs.style.display = 'none';
 
-  submitButton.value = 'Séléctionner l\'agencement';
+  submitButton.value = 'Séléctionner le thème';
 
 });
 
