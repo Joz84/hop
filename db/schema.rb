@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20180916125432) do
     t.string "banner_title"
     t.string "banner_cta"
     t.string "banner_punchline"
+    t.string "color_id"
     t.index ["template_id"], name: "index_websites_on_template_id"
     t.index ["user_id"], name: "index_websites_on_user_id"
   end

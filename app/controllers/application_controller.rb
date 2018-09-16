@@ -19,8 +19,4 @@ class ApplicationController < ActionController::Base
   def set_tenant
     @current_tenant = request.subdomains.first
   end
-
-  def tenant_url(tenant = request.subdomains.first)
-    [tenant, *request.subdomains[1..-1], request.domain].join('.')
-  end
 end

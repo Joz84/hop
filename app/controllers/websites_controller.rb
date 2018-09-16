@@ -5,7 +5,7 @@ class WebsitesController < ApplicationController
   layout 'builder', only: [:edit]
 
   def index
-    @websites = current_user.websites
+    @websites = [current_user.website]
   end
 
   def show
@@ -14,24 +14,28 @@ class WebsitesController < ApplicationController
 
   def edit
     @templates = Template.all
-    @website = Website.find_by(url: current_tenant)
+    @website = current_user.website if current_user.website&.url == current_tenant || current_user.website&.id == params[:id].to_i
+    @url = case current_tenant
+           when 'build' then website_path(@website)
+           else '/'
+           end
   end
 
   def update
-    @website = Website.find_by(url: current_tenant)
+    @website = current_user.website if current_user.website&.url == current_tenant || current_user.website&.id == params[:id].to_i
     @template = Template.find(params[:website][:template_id])
     @website.template = @template
     @website.update(website_params)
 
     respond_to do |format|
-      format.html { redirect_to tenant_url }
+      format.html { redirect_to @website.host }
       format.js
     end
   end
 
   def create
-    @website = current_user.websites.create(template: Template.first)
-    redirect_to edit_website_path @website, host: tenant_url(@website.name)
+    @website = Website.create!(user: current_user, template: Template.first)
+    redirect_to edit_website_path @website
   end
 
   # GET /websites/:id/template => { template: ":template_slug"}
@@ -54,7 +58,11 @@ class WebsitesController < ApplicationController
       :facebook_url,
       :twitter_url,
       :email,
-      :url
+      :url,
+      :banner_title,
+      :banner_cta,
+      :banner_punchline,
+      :banner_background
     )
   end
 end
