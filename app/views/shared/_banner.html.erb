@@ -6,7 +6,7 @@
       <% if website = current_user.website %>
         <%= button_to 'Personnaliser mon site', edit_website_path(website, host: website.host), class: 'button' %>
       <% else %>
-        <%= button_to 'Créer mon site', new_website_path(website, host: website.host), class: 'button' %>
+        <%= button_to 'Créer mon site', new_website_path, class: 'button' %>
       <% end %>
     <% else %>
       <%= link_to 'Créer mon site', new_user_session_path, class: 'button' %>
