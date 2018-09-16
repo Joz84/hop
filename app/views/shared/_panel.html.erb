@@ -18,16 +18,24 @@
 
     <%= simple_form_for :style do |f| %>
     <%= f.input :color_id, label: false do %>
-      <% @styles =  [ 'Green','Blue','Red' ] %>
-      <%= f.collection_radio_buttons :color_id, @styles, :to_s, :to_s, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
-      <%= b.radio_button(data: { style: b.object }) %> <%= b.object %>
-      <% end %>
+    <% @styles =  [ 'Green','Blue','Red' ] %>
+    <%= f.collection_radio_buttons :color_id, @styles, :to_s, :to_s, item_wrapper_tag: :span, item_wrapper_class: :radio do |b| %>
+    <%= b.radio_button(data: { style: b.object }) %> <%= b.object %>
+    <% end %>
+
     <% end %>
     <% end %>
 
   </div>
 
+  <div class="edit-banner">
+
+  </div>
+
   <div id="edit-inputs">
+    <%= f.input :banner_title, placeholder: "Coco" %>
+    <%= f.input :banner_punchline, as: :text, placeholder: 'Websites did not need to be...' %>
+    <%= f.input :banner_background, as: :attachinary, cloudinary: { transformation: {opacity: 50}} %>
     <h3>Edit your content</h3>
     <p>Add your information to <span>populate your new website</span>.</p>
     <%= f.input :title, placeholder: "Hi ! I'm a ..." %>
@@ -48,6 +56,7 @@
   </div>
 
   <%= f.button :submit, class: 'button btn-block', id: 'website-submit', value: 'Select template' %>
+  >>>>>>> 2507188b09f4932cdfbb44637322a5ce6e592a51
   <% end %>
 
   <div class="result">
