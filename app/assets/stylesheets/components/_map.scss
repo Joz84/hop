@@ -1,0 +1,45 @@
+.main-container {
+  display: flex;
+}
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+
+.event-dates {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+  i {
+    margin: 10px;
+    font-size: 24px;
+  }
+}
+
+.event-card {
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px grey;
+  h2 {
+    margin: 0px;
+  }
+  h3 {
+    margin: 0px;
+  }
+  p {
+
+  }
+  a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  hr {
+    margin: 5px;
+  }
+}
