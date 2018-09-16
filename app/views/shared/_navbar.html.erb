@@ -9,7 +9,7 @@
         <% if current_user.website.url.present? %>
           <li><%= link_to 'Éditer mon site', edit_own_website_url(host: current_user.website.host), class: 'link' %></li>
         <% else %>
-          <li><%= link_to 'Éditer mon site', edit_website_url(website), class: 'link' %></li>
+          <li><%= link_to 'Éditer mon site', edit_website_url(current_user.website), class: 'link' %></li>
         <% end %>
       <% else %>
         <li><%= link_to 'Créer mon site', websites_path, method: :post, class: 'link' %></li>

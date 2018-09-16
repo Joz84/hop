@@ -11,4 +11,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( layouts/{north,east,west,south,red,blue,green}.* )
+%i[north east west south red blue green].each do |stylesheet|
+  Rails.application.config.assets.precompile += ["layouts/#{stylesheet}.css"]
+end
