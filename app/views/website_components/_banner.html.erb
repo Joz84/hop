@@ -1,4 +1,4 @@
-<div class="website-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= website.banner_background ? cl_image_path(website.banner_background) : "https://www.guide-du-perigord.com/_bibli/annonces/3389/hd/riberac05.jpg" %>');">
+<div class="website-banner" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.6) 0%, var(--filter-color) 50%), url('<%= website.banner_background ? cl_image_path(website.banner_background) : "https://www.guide-du-perigord.com/_bibli/annonces/3389/hd/riberac05.jpg" %>');">
   <div class="website-banner-content">
     <h1><%= website.banner_title ? website.banner_title : "Votre titre" %></h1>
     <p><%= website.banner_punchline ? website.banner_punchline : "Votre punchline ici!!!"  %></p>
