@@ -1,11 +1,15 @@
 <div class="banner">
   <div class="banner-content">
-    <h1>Hop your website without technical skills</h1>
-    <p class="intro">The easiest way to create your online presence for free, in few minutes.</p>
+    <h1>Mettez vous en avant facilement et en quelques clics</h1>
+    <p class="intro">Créez votre site web personnalisé en quelques minutes.</p>
     <% if current_user %>
-      <%= button_to 'Start building', websites_path, class: 'button' %>
+      <% if website = current_user.website %>
+        <%= button_to 'Personnaliser mon site', edit_website_path(website, host: website.host), class: 'button' %>
+      <% else %>
+        <%= button_to 'Créer mon site', new_website_path(website, host: website.host), class: 'button' %>
+      <% end %>
     <% else %>
-      <%= link_to 'Start building', new_user_session_path, class: 'button' %>
+      <%= link_to 'Créer mon site', new_user_session_path, class: 'button' %>
     <% end %>
   </div>
 </div>

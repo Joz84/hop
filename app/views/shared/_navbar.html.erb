@@ -1,14 +1,18 @@
 <div class="navbar-home">
   <%= link_to root_path do %>
-    <%= image_tag 'logo-white.png' %>
+    <%= image_tag 'logo.png' %>
   <% end %>
 
   <ul>
     <% if user_signed_in? %>
-      <li><%= link_to 'Dashboard', websites_path, class: 'link' %></li>
-      <li><%= link_to 'Sign out', destroy_user_session_path, class: 'link', method: :delete %></li>
+      <% if current_user.websites.any? %>
+        <li><%= link_to 'Éditer mon site', edit_website_path(host: current_user.website.host), class: 'link' %></li>
+      <% else %>
+        <li><%= link_to 'Créer mon site', new_website_path, class: 'link' %></li>
+      <% end %>
+      <li><%= link_to 'Me déconnecter', destroy_user_session_path, class: 'link', method: :delete %></li>
     <% else %>
-      <li><%= link_to 'Sign in', new_user_session_path, class: 'link' %></li>
+      <li><%= link_to 'Me connecter', new_user_session_path, class: 'link' %></li>
     <% end %>
   </ul>
 </div>

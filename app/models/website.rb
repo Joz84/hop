@@ -1,4 +1,6 @@
 class Website < ApplicationRecord
+  RESERVED_KEYWORDS = ['build']
+
   before_create :set_default
 
   belongs_to :user
@@ -11,7 +13,11 @@ class Website < ApplicationRecord
   has_attachment :banner_background
 
   validate do
-    errors.add 'URL is a reserved keyword' if url.to_s == 'build'
+    errors.add 'URL is a reserved keyword' if url.to_s.in? RESERVED_KEYWORDS
+  end
+
+  def host(domain: ENV['APPLICATION_DOMAIN'])
+    [url, domain].join('.')
   end
 
   private

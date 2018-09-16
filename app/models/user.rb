@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :websites
+  has_one :website
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

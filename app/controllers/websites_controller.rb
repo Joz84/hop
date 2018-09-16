@@ -24,14 +24,14 @@ class WebsitesController < ApplicationController
     @website.update(website_params)
 
     respond_to do |format|
-      format.html { redirect_to tenant_url }
+      format.html { redirect_to @website.host }
       format.js
     end
   end
 
   def create
     @website = current_user.websites.create(template: Template.first)
-    redirect_to edit_website_path @website, host: tenant_url(@website.name)
+    redirect_to edit_website_path @website, host: @website.host
   end
 
   # GET /websites/:id/template => { template: ":template_slug"}

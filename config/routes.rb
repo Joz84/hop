@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   constraints subdomain: 'build' do
-    resources :websites, only: [:create]
+    root to: 'pages#home'
+    resources :websites, only: [:new, :create]
   end
 end
