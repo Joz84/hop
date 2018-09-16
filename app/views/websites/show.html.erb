@@ -1,14 +1,5 @@
 <% title @website.title %>
 
 <div class="website-template-container">
-  <% case @website.template.name %>
-  <% when 'north' %>
-    <%= render 'templates/template_north' %>
-  <% when 'south' %>
-    <%= render 'templates/template_south' %>
-  <% when 'west' %>
-    <%= render 'templates/template_west' %>
-  <% when 'east' %>
-    <%= render 'templates/template_east' %>
-  <% end %>
+  <%= render "website_components/banner", website: @website %>
 </div>
