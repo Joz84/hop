@@ -14,8 +14,7 @@ class WebsitesController < ApplicationController
 
   def edit
     @templates = Template.all
-    @website = Website.find_by(url: current_tenant)
-    @website ||= Website.find_by(id: params[:id])
+    @website = current_user.website if current_user.website&.url == current_tenant || current_user.website&.id == params[:id].to_i
   end
 
   def update
