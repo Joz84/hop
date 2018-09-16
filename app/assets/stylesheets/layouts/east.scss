@@ -1,4 +1,8 @@
 .website-template-container, .builder-website {
   display: flex;
   flex-direction: row-reverse;
+
+  * {
+    flex: 1;
+  }
 }
