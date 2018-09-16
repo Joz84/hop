@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   constraints lambda { |req| (req.subdomains - ['build']).any? } do
     root to: 'websites#show'
-    get 'edit', to: 'websites#edit', as: 'edit_website'
+    get 'edit', to: 'websites#edit', as: 'edit_own_website'
     post '/', to: 'websites#update', as: 'website'
 
     get 'events', to: 'pages#events'
@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   constraints subdomain: 'build' do
     root to: 'pages#home'
-    resources :websites, only: [:new, :create]
+    resources :websites, only: [:new, :create, :edit]
   end
 end

@@ -4,9 +4,9 @@
     <p class="intro">Créez votre site web personnalisé en quelques minutes.</p>
     <% if current_user %>
       <% if website = current_user.website %>
-        <%= button_to 'Personnaliser mon site', edit_website_path(website, host: website.host), class: 'button' %>
+        <%= button_to 'Personnaliser mon site', edit_own_website_path(website, host: website.host), class: 'button' %>
       <% else %>
-        <%= button_to 'Créer mon site', new_website_path, class: 'button' %>
+        <%= button_to 'Créer mon site', websites_path, method: :post, class: 'button' %>
       <% end %>
     <% else %>
       <%= link_to 'Créer mon site', new_user_session_path, class: 'button' %>

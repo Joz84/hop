@@ -5,7 +5,7 @@ class WebsitesController < ApplicationController
   layout 'builder', only: [:edit]
 
   def index
-    @websites = current_user.websites
+    @websites = [current_user.website]
   end
 
   def show
@@ -15,6 +15,7 @@ class WebsitesController < ApplicationController
   def edit
     @templates = Template.all
     @website = Website.find_by(url: current_tenant)
+    @website ||= Website.find_by(id: params[:id])
   end
 
   def update
@@ -30,8 +31,8 @@ class WebsitesController < ApplicationController
   end
 
   def create
-    @website = current_user.websites.create(template: Template.first)
-    redirect_to edit_website_path @website, host: @website.host
+    @website = Website.create!(user: current_user, template: Template.first)
+    redirect_to edit_website_path @website
   end
 
   # GET /websites/:id/template => { template: ":template_slug"}
